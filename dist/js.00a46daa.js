@@ -39462,7 +39462,7 @@ if (typeof window !== 'undefined') {
 },{}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
-var THREE = _interopRequireWildcard(require("../node_modules/three/build/three.module.js"));
+var THREE = _interopRequireWildcard(require("three"));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -39488,7 +39488,7 @@ function animation(time) {
   mesh.rotation.y = time / 1000;
   renderer.render(scene, camera);
 }
-},{"../node_modules/three/build/three.module.js":"node_modules/three/build/three.module.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"three":"node_modules/three/build/three.module.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
