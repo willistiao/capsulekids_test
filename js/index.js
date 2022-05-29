@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { InteractionManager } from 'three.interactive';
-import * as TWEEN from 'tween';
+import * as TWEEN from '@tweenjs/tween.js';
 
 import createCube from "../js/createCube.js";
 import createLight from "../js/createLight";
