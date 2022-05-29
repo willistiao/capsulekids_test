@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 import { InteractionManager } from 'three.interactive';
-import * as TWEEN from '@tweenjs/tween.js';
 
 import createCube from "../js/createCube.js";
 import createLight from "../js/createLight";
@@ -9,6 +8,7 @@ import createCamera from "../js/createCamera";
 import createRenderer from "../js/createRenderer";
 import createScene from "../js/createScene";
 
+const TWEEN = require('@tweenjs/tween.js');
 
 const renderer = createRenderer();
 const scene = createScene();
