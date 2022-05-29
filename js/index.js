@@ -2,12 +2,12 @@ import * as THREE from 'three';
 import { InteractionManager } from 'three.interactive';
 import * as TWEEN from 'tween';
 
-import createCube from "/js/createCube.js";
-import createLight from "/js/createLight";
-import animate from "/js/animate";
-import createCamera from "/js/createCamera";
-import createRenderer from "/js/createRenderer";
-import createScene from "/js/createScene";
+import createCube from "js/createCube.js";
+import createLight from "js/createLight";
+import animate from "js/animate";
+import createCamera from "js/createCamera";
+import createRenderer from "js/createRenderer";
+import createScene from "js/createScene";
 
 
 const renderer = createRenderer();
