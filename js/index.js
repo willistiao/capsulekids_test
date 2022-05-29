@@ -1,30 +1,55 @@
 import * as THREE from 'three';
+import { InteractionManager } from 'three.interactive';
+import * as TWEEN from 'tween';
 
-// init
+import createCube from "/js/createCube.js";
+import createLight from "/js/createLight";
+import animate from "/js/animate";
+import createCamera from "/js/createCamera";
+import createRenderer from "/js/createRenderer";
+import createScene from "/js/createScene";
 
-const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-camera.position.z = 1;
 
-const scene = new THREE.Scene();
+const renderer = createRenderer();
+const scene = createScene();
+const camera = createCamera();
+const interactionManager = new InteractionManager(
+  renderer,
+  camera,
+  renderer.domElement
+);
 
-const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-const material = new THREE.MeshNormalMaterial();
+const cubes = {
+  pink: createCube({ color: 0xff00ce, x: -1, y: -1 }),
+  purple: createCube({ color: 0x9300fb, x: 1, y: -1 }),
+  blue: createCube({ color: 0x0065d9, x: 1, y: 1 }),
+  cyan: createCube({ color: 0x00d7d0, x: -1, y: 1 })
+};
 
-const mesh = new THREE.Mesh( geometry, material );
-scene.add( mesh );
+const light = createLight();
 
-const renderer = new THREE.WebGLRenderer( { antialias: true } );
-renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.setAnimationLoop( animation );
-document.body.appendChild( renderer.domElement );
-
-// animation
-
-function animation( time ) {
-
-	mesh.rotation.x = time / 2000;
-	mesh.rotation.y = time / 1000;
-
-	renderer.render( scene, camera );
-
+for (const [name, object] of Object.entries(cubes)) {
+  object.addEventListener("click", (event) => {
+    event.stopPropagation();
+    console.log(`${name} cube was clicked`);
+    const cube = event.target;
+    const coords = { x: camera.position.x, y: camera.position.y };
+    new TWEEN.Tween(coords)
+      .to({ x: cube.position.x, y: cube.position.y })
+      .easing(TWEEN.Easing.Quadratic.Out)
+      .onUpdate(() =>
+        camera.position.set(coords.x, coords.y, camera.position.z)
+      )
+      .start();
+  });
+  interactionManager.add(object);
+  scene.add(object);
 }
+
+scene.add(light);
+
+animate((time) => {
+  renderer.render(scene, camera);
+  interactionManager.update();
+  TWEEN.update(time);
+});
