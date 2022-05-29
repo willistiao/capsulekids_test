@@ -1,12 +1,12 @@
 import * as THREE from 'three';
 import { InteractionManager } from 'three.interactive';
 
-import createCube from "../js/createCube.js";
-import createLight from "../js/createLight";
-import animate from "../js/animate";
-import createCamera from "../js/createCamera";
-import createRenderer from "../js/createRenderer";
-import createScene from "../js/createScene";
+import createCube from "/js/createCube";
+import createLight from "/js/createLight";
+import animate from "/js/animate";
+import createCamera from "/js/createCamera";
+import createRenderer from "/js/createRenderer";
+import createScene from "/js/createScene";
 
 const TWEEN = require('@tweenjs/tween.js');
 
