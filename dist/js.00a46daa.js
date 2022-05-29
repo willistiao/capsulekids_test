@@ -40430,17 +40430,17 @@ var _three2 = require("three.interactive");
 
 var TWEEN = _interopRequireWildcard(require("tween"));
 
-var _createCube = _interopRequireDefault(require("/js/createCube.js"));
+var _createCube = _interopRequireDefault(require("../js/createCube.js"));
 
-var _createLight = _interopRequireDefault(require("/js/createLight"));
+var _createLight = _interopRequireDefault(require("../js/createLight"));
 
-var _animate = _interopRequireDefault(require("/js/animate"));
+var _animate = _interopRequireDefault(require("../js/animate"));
 
-var _createCamera = _interopRequireDefault(require("/js/createCamera"));
+var _createCamera = _interopRequireDefault(require("../js/createCamera"));
 
-var _createRenderer = _interopRequireDefault(require("/js/createRenderer"));
+var _createRenderer = _interopRequireDefault(require("../js/createRenderer"));
 
-var _createScene = _interopRequireDefault(require("/js/createScene"));
+var _createScene = _interopRequireDefault(require("../js/createScene"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40522,7 +40522,7 @@ scene.add(light);
   interactionManager.update();
   TWEEN.update(time);
 });
-},{"three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js","tween":"node_modules/tween/tween.js","/js/createCube.js":"js/createCube.js","/js/createLight":"js/createLight.js","/js/animate":"js/animate.js","/js/createCamera":"js/createCamera.js","/js/createRenderer":"js/createRenderer.js","/js/createScene":"js/createScene.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js","tween":"node_modules/tween/tween.js","../js/createCube.js":"js/createCube.js","../js/createLight":"js/createLight.js","../js/animate":"js/animate.js","../js/createCamera":"js/createCamera.js","../js/createRenderer":"js/createRenderer.js","../js/createScene":"js/createScene.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
