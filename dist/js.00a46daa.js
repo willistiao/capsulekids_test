@@ -40942,17 +40942,17 @@ var THREE = _interopRequireWildcard(require("three"));
 
 var _three2 = require("three.interactive");
 
-var _createCube = _interopRequireDefault(require("/js/createCube"));
+var _createCube = _interopRequireDefault(require("./createCube"));
 
-var _createLight = _interopRequireDefault(require("/js/createLight"));
+var _createLight = _interopRequireDefault(require("./createLight"));
 
-var _animate = _interopRequireDefault(require("/js/animate"));
+var _animate = _interopRequireDefault(require("./animate"));
 
-var _createCamera = _interopRequireDefault(require("/js/createCamera"));
+var _createCamera = _interopRequireDefault(require("./createCamera"));
 
-var _createRenderer = _interopRequireDefault(require("/js/createRenderer"));
+var _createRenderer = _interopRequireDefault(require("./createRenderer"));
 
-var _createScene = _interopRequireDefault(require("/js/createScene"));
+var _createScene = _interopRequireDefault(require("./createScene"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -41036,7 +41036,7 @@ scene.add(light);
   interactionManager.update();
   TWEEN.update(time);
 });
-},{"three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js","/js/createCube":"js/createCube.js","/js/createLight":"js/createLight.js","/js/animate":"js/animate.js","/js/createCamera":"js/createCamera.js","/js/createRenderer":"js/createRenderer.js","/js/createScene":"js/createScene.js","@tweenjs/tween.js":"node_modules/@tweenjs/tween.js/dist/tween.esm.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js","./createCube":"js/createCube.js","./createLight":"js/createLight.js","./animate":"js/animate.js","./createCamera":"js/createCamera.js","./createRenderer":"js/createRenderer.js","./createScene":"js/createScene.js","@tweenjs/tween.js":"node_modules/@tweenjs/tween.js/dist/tween.esm.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -41064,7 +41064,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56100" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56857" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
