@@ -1,6 +1,7 @@
-import "regenerator-runtime/runtime";
+import 'regenerator-runtime/runtime';
 import * as THREE from 'three';
 import { InteractionManager } from 'three.interactive';
+
 
 import createCube from "./createCube";
 import createLight from "./createLight";
