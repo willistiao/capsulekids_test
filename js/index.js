@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime";
 import * as THREE from 'three';
 import { InteractionManager } from 'three.interactive';
 
@@ -9,6 +10,7 @@ import createRenderer from "./createRenderer";
 import createScene from "./createScene";
 
 const TWEEN = require('@tweenjs/tween.js');
+
 
 const renderer = createRenderer();
 const scene = createScene();
