@@ -42102,7 +42102,7 @@ exports.default = _default;
 },{"process":"../../../../../usr/local/lib/node_modules/parcel-bundler/node_modules/process/browser.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
-require("regenerator-runtime/runtime");
+var _regeneratorRuntime = _interopRequireDefault(require("regenerator-runtime"));
 
 var THREE = _interopRequireWildcard(require("three"));
 
@@ -42120,11 +42120,11 @@ var _createRenderer = _interopRequireDefault(require("./createRenderer"));
 
 var _createScene = _interopRequireDefault(require("./createScene"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -42202,7 +42202,7 @@ scene.add(light);
   interactionManager.update();
   TWEEN.update(time);
 });
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js","./createCube":"js/createCube.js","./createLight":"js/createLight.js","./animate":"js/animate.js","./createCamera":"js/createCamera.js","./createRenderer":"js/createRenderer.js","./createScene":"js/createScene.js","@tweenjs/tween.js":"node_modules/@tweenjs/tween.js/dist/tween.esm.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js","./createCube":"js/createCube.js","./createLight":"js/createLight.js","./animate":"js/animate.js","./createCamera":"js/createCamera.js","./createRenderer":"js/createRenderer.js","./createScene":"js/createScene.js","@tweenjs/tween.js":"node_modules/@tweenjs/tween.js/dist/tween.esm.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
