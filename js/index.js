@@ -1,6 +1,6 @@
-import regeneratorRuntime from "regenerator-runtime";
-import * as THREE from "three";
-import { InteractionManager } from "three.interactive";
+// import regeneratorRuntime from "regenerator-runtime";
+// import * as THREE from "three";
+// import { InteractionManager } from "three.interactive";
 
 alert('hello');
 
