@@ -1,6 +1,6 @@
 import regeneratorRuntime from 'regenerator-runtime';
 import * as THREE from 'three';
-import { InteractionManager } from 'three.interactive';
+import { InteractionManager } from "three.interactive";
 
 
 import createCube from "./createCube";
@@ -56,3 +56,4 @@ animate((time) => {
   interactionManager.update();
   TWEEN.update(time);
 });
+
