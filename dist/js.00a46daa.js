@@ -40825,6 +40825,52 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+alert('hello'); // import createCube from "./createCube";
+// import createLight from "./createLight";
+// import animate from "./animate";
+// import createCamera from "./createCamera";
+// import createRenderer from "./createRenderer";
+// import createScene from "./createScene";
+// const TWEEN = require('@tweenjs/tween.js');
+// const renderer = createRenderer();
+// const scene = createScene();
+// const camera = createCamera();
+// const interactionManager = new InteractionManager(
+//   renderer,
+//   camera,
+//   renderer.domElement
+// );
+// const cubes = {
+//   pink: createCube({ color: 0xff00ce, x: -1, y: -1 }),
+//   purple: createCube({ color: 0x9300fb, x: 1, y: -1 }),
+//   blue: createCube({ color: 0x0065d9, x: 1, y: 1 }),
+//   cyan: createCube({ color: 0x00d7d0, x: -1, y: 1 })
+// };
+// const light = createLight();
+// for (const [name, object] of Object.entries(cubes)) {
+//   object.addEventListener("click", (event) => {
+//     event.stopPropagation();
+//     console.log(`${name} cube was clicked`);
+//     const cube = event.target;
+//     const coords = { x: camera.position.x, y: camera.position.y };
+//     new TWEEN.Tween(coords)
+//       .to({ x: cube.position.x, y: cube.position.y })
+//       .easing(TWEEN.Easing.Quadratic.Out)
+//       .onUpdate(() =>
+//         camera.position.set(coords.x, coords.y, camera.position.z)
+//       )
+//       .start();
+//   });
+//   interactionManager.add(object);
+//   scene.add(object);
+// }
+// scene.add(light);
+// animate((time) => {
+//   renderer.render(scene, camera);
+//   interactionManager.update();
+//   TWEEN.update(time);
+// });
 },{"regenerator-runtime":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -40853,7 +40899,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52709" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54306" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
