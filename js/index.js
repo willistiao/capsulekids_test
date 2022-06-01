@@ -1,4 +1,4 @@
-import regeneratorRuntime from "regenerator-runtime";
+import "regenerator-runtime/runtime.js";
 import * as THREE from "three";
 // import { InteractionManager } from "three.interactive";
 
