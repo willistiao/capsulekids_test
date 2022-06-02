@@ -42108,17 +42108,17 @@ var THREE = _interopRequireWildcard(require("three"));
 
 var _three2 = require("three.interactive");
 
-var _createCube = _interopRequireDefault(require("./createCube"));
+var _createCube = _interopRequireDefault(require("./createCube.js"));
 
-var _createLight = _interopRequireDefault(require("./createLight"));
+var _createLight = _interopRequireDefault(require("./createLight.js"));
 
-var _animate = _interopRequireDefault(require("./animate"));
+var _animate = _interopRequireDefault(require("./animate.js"));
 
-var _createCamera = _interopRequireDefault(require("./createCamera"));
+var _createCamera = _interopRequireDefault(require("./createCamera.js"));
 
-var _createRenderer = _interopRequireDefault(require("./createRenderer"));
+var _createRenderer = _interopRequireDefault(require("./createRenderer.js"));
 
-var _createScene = _interopRequireDefault(require("./createScene"));
+var _createScene = _interopRequireDefault(require("./createScene.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42202,7 +42202,7 @@ scene.add(light);
   interactionManager.update();
   TWEEN.update(time);
 });
-},{"regenerator-runtime/runtime.js":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js","./createCube":"js/createCube.js","./createLight":"js/createLight.js","./animate":"js/animate.js","./createCamera":"js/createCamera.js","./createRenderer":"js/createRenderer.js","./createScene":"js/createScene.js","@tweenjs/tween.js":"node_modules/@tweenjs/tween.js/dist/tween.esm.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime.js":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js","./createCube.js":"js/createCube.js","./createLight.js":"js/createLight.js","./animate.js":"js/animate.js","./createCamera.js":"js/createCamera.js","./createRenderer.js":"js/createRenderer.js","./createScene.js":"js/createScene.js","@tweenjs/tween.js":"node_modules/@tweenjs/tween.js/dist/tween.esm.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

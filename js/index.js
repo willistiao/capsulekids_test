@@ -3,12 +3,12 @@ import * as THREE from "three";
 import { InteractionManager } from "three.interactive";
 
 
-import createCube from "./createCube";
-import createLight from "./createLight";
-import animate from "./animate";
-import createCamera from "./createCamera";
-import createRenderer from "./createRenderer";
-import createScene from "./createScene";
+import createCube from "./createCube.js";
+import createLight from "./createLight.js";
+import animate from "./animate.js";
+import createCamera from "./createCamera.js";
+import createRenderer from "./createRenderer.js";
+import createScene from "./createScene.js";
 
 const TWEEN = require('@tweenjs/tween.js');
 
@@ -28,6 +28,7 @@ const cubes = {
   blue: createCube({ color: 0x0065d9, x: 1, y: 1 }),
   cyan: createCube({ color: 0x00d7d0, x: -1, y: 1 })
 };
+
 
 const light = createLight();
 
