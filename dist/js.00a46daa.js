@@ -40242,102 +40242,6 @@ function createCube(_ref) {
   cube.position.set(x, y, 0);
   return cube;
 }
-},{"three":"node_modules/three/build/three.module.js"}],"js/createLight.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = createLight;
-
-var THREE = _interopRequireWildcard(require("three"));
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function createLight() {
-  var light = new THREE.PointLight(0xffffff, 1, 1000);
-  light.position.set(0, 0, 10);
-  return light;
-}
-},{"three":"node_modules/three/build/three.module.js"}],"js/animate.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = animate;
-
-function animate(callback) {
-  function loop(time) {
-    callback(time);
-    requestAnimationFrame(loop);
-  }
-
-  requestAnimationFrame(loop);
-}
-},{}],"js/createCamera.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = createCamera;
-
-var THREE = _interopRequireWildcard(require("three"));
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function createCamera() {
-  var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.z = 5;
-  return camera;
-}
-},{"three":"node_modules/three/build/three.module.js"}],"js/createRenderer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = createRenderer;
-
-var THREE = _interopRequireWildcard(require("three"));
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function createRenderer() {
-  var root = document.getElementById("app");
-  var renderer = new THREE.WebGLRenderer({
-    antialias: true
-  });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  root.appendChild(renderer.domElement);
-  return renderer;
-}
-},{"three":"node_modules/three/build/three.module.js"}],"js/createScene.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = createScene;
-
-var THREE = _interopRequireWildcard(require("three"));
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function createScene() {
-  var scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xffffff);
-  return scene;
-}
 },{"three":"node_modules/three/build/three.module.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -40345,103 +40249,12 @@ require("regenerator-runtime/runtime.js");
 
 var THREE = _interopRequireWildcard(require("three"));
 
-var _createCube = _interopRequireDefault(require("./createCube"));
-
-var _createLight = _interopRequireDefault(require("./createLight"));
-
-var _animate = _interopRequireDefault(require("./animate"));
-
-var _createCamera = _interopRequireDefault(require("./createCamera"));
-
-var _createRenderer = _interopRequireDefault(require("./createRenderer"));
-
-var _createScene = _interopRequireDefault(require("./createScene"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _createCube = require("./createCube.js");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-// const TWEEN = require('@tweenjs/tween.js');
-var renderer = (0, _createRenderer.default)();
-var scene = (0, _createScene.default)();
-var camera = (0, _createCamera.default)(); // const interactionManager = new InteractionManager(
-//   renderer,
-//   camera,
-//   renderer.domElement
-// );
-
-var cubes = {
-  pink: (0, _createCube.default)({
-    color: 0xff00ce,
-    x: -1,
-    y: -1
-  }),
-  purple: (0, _createCube.default)({
-    color: 0x9300fb,
-    x: 1,
-    y: -1
-  }),
-  blue: (0, _createCube.default)({
-    color: 0x0065d9,
-    x: 1,
-    y: 1
-  }),
-  cyan: (0, _createCube.default)({
-    color: 0x00d7d0,
-    x: -1,
-    y: 1
-  })
-};
-var light = (0, _createLight.default)();
-
-var _loop = function _loop() {
-  var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
-      name = _Object$entries$_i[0],
-      object = _Object$entries$_i[1];
-
-  object.addEventListener("click", function (event) {
-    event.stopPropagation();
-    console.log("".concat(name, " cube was clicked"));
-    var cube = event.target;
-    var coords = {
-      x: camera.position.x,
-      y: camera.position.y
-    }; // new TWEEN.Tween(coords)
-    //   .to({ x: cube.position.x, y: cube.position.y })
-    //   .easing(TWEEN.Easing.Quadratic.Out)
-    //   .onUpdate(() =>
-    //     camera.position.set(coords.x, coords.y, camera.position.z)
-    //   )
-    //   .start();
-  }); //   interactionManager.add(object);
-
-  scene.add(object);
-};
-
-for (var _i = 0, _Object$entries = Object.entries(cubes); _i < _Object$entries.length; _i++) {
-  _loop();
-}
-
-scene.add(light);
-(0, _animate.default)(function (time) {
-  renderer.render(scene, camera); //   interactionManager.update();
-  //   TWEEN.update(time);
-});
-},{"regenerator-runtime/runtime.js":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","./createCube":"js/createCube.js","./createLight":"js/createLight.js","./animate":"js/animate.js","./createCamera":"js/createCamera.js","./createRenderer":"js/createRenderer.js","./createScene":"js/createScene.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime.js":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","./createCube.js":"js/createCube.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -40469,7 +40282,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58384" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59646" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
