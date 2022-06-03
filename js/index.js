@@ -4,7 +4,7 @@ import * as THREE from "three";
 
 import { createCube } from './createCube.js';
 
-import createCube from "./createCube.js";
+// import createCube from "./createCube.js";
 // import createLight from "./createLight";
 // import animate from "./animate";
 // import createCamera from "./createCamera";
