@@ -40338,192 +40338,12 @@ function createScene() {
   scene.background = new THREE.Color(0xffffff);
   return scene;
 }
-},{"three":"node_modules/three/build/three.module.js"}],"node_modules/three.interactive/build/three.interactive.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.InteractiveObject = exports.InteractiveEvent = exports.InteractionManager = void 0;
-
-var _three = require("three");
-
-var c = class {
-  target;
-  name;
-  intersected;
-  wasIntersected = !1;
-  distance;
-
-  constructor(e, s) {
-    this.target = e, this.name = s, this.intersected = !1, this.distance = 0;
-  }
-
-},
-    i = class {
-  type;
-  cancelBubble;
-  originalEvent;
-  coords = new _three.Vector2(0, 0);
-  distance = 0;
-  intersected = !1;
-
-  constructor(e, s = null) {
-    this.cancelBubble = !1, this.type = e, this.originalEvent = s;
-  }
-
-  stopPropagation() {
-    this.cancelBubble = !0;
-  }
-
-},
-    u = class {
-  renderer;
-  camera;
-  domElement;
-  bindEventsOnBodyElement;
-  mouse;
-  supportsPointerEvents;
-  interactiveObjects;
-  closestObject;
-  raycaster;
-  treatTouchEventsAsMouseEvents;
-
-  constructor(e, s, t, n) {
-    this.renderer = e, this.camera = s, this.domElement = t, this.bindEventsOnBodyElement = !0, typeof n < "u" && n && (this.bindEventsOnBodyElement = !1), this.mouse = new _three.Vector2(-1, 1), this.supportsPointerEvents = !!window.PointerEvent, this.interactiveObjects = [], this.closestObject = null, this.raycaster = new _three.Raycaster(), t.addEventListener("click", this.onMouseClick), this.supportsPointerEvents ? (this.bindEventsOnBodyElement ? t.ownerDocument.addEventListener("pointermove", this.onDocumentMouseMove) : t.addEventListener("pointermove", this.onDocumentMouseMove), t.addEventListener("pointerdown", this.onMouseDown), t.addEventListener("pointerup", this.onMouseUp)) : (this.bindEventsOnBodyElement ? t.ownerDocument.addEventListener("mousemove", this.onDocumentMouseMove) : t.addEventListener("mousemove", this.onDocumentMouseMove), t.addEventListener("mousedown", this.onMouseDown), t.addEventListener("mouseup", this.onMouseUp), t.addEventListener("touchstart", this.onTouchStart, {
-      passive: !0
-    }), t.addEventListener("touchmove", this.onTouchMove, {
-      passive: !0
-    }), t.addEventListener("touchend", this.onTouchEnd, {
-      passive: !0
-    })), this.treatTouchEventsAsMouseEvents = !0;
-  }
-
-  dispose = () => {
-    this.domElement.removeEventListener("click", this.onMouseClick), this.supportsPointerEvents ? (this.domElement.ownerDocument.removeEventListener("pointermove", this.onDocumentMouseMove), this.domElement.removeEventListener("pointerdown", this.onMouseDown), this.domElement.removeEventListener("pointerup", this.onMouseUp)) : (this.domElement.ownerDocument.removeEventListener("mousemove", this.onDocumentMouseMove), this.domElement.removeEventListener("mousedown", this.onMouseDown), this.domElement.removeEventListener("mouseup", this.onMouseUp), this.domElement.removeEventListener("touchstart", this.onTouchStart), this.domElement.removeEventListener("touchmove", this.onTouchMove), this.domElement.removeEventListener("touchend", this.onTouchEnd));
-  };
-  add = (e, s = []) => {
-    if (e) if (s.length > 0) s.forEach(t => {
-      let n = e.getObjectByName(t);
-
-      if (n) {
-        let o = new c(n, t);
-        this.interactiveObjects.push(o);
-      }
-    });else {
-      let t = new c(e, e.name);
-      this.interactiveObjects.push(t);
-    }
-  };
-  remove = (e, s = []) => {
-    if (!e) return;
-    let t = new Set(s.length > 0 ? s : [e.name]);
-    this.interactiveObjects = this.interactiveObjects.filter(n => !t.has(n.name));
-  };
-  update = () => {
-    this.raycaster.setFromCamera(this.mouse, this.camera), this.interactiveObjects.forEach(n => {
-      n.target && this.checkIntersection(n);
-    }), this.interactiveObjects.sort(function (n, o) {
-      return n.distance - o.distance;
-    });
-    let e = this.interactiveObjects.find(n => n.intersected) ?? null;
-
-    if (e != this.closestObject) {
-      if (this.closestObject) {
-        let n = new i("mouseout");
-        this.dispatch(this.closestObject, n);
-      }
-
-      if (e) {
-        let n = new i("mouseover");
-        this.dispatch(e, n);
-      }
-
-      this.closestObject = e;
-    }
-
-    let s;
-    this.interactiveObjects.forEach(n => {
-      !n.intersected && n.wasIntersected && (s || (s = new i("mouseleave")), this.dispatch(n, s));
-    });
-    let t;
-    this.interactiveObjects.forEach(n => {
-      n.intersected && !n.wasIntersected && (t || (t = new i("mouseenter")), this.dispatch(n, t));
-    });
-  };
-  checkIntersection = e => {
-    let s = this.raycaster.intersectObjects([e.target], !0);
-
-    if (e.wasIntersected = e.intersected, s.length > 0) {
-      let t = s[0].distance;
-      s.forEach(n => {
-        n.distance < t && (t = n.distance);
-      }), e.intersected = !0, e.distance = t;
-    } else e.intersected = !1;
-  };
-  onDocumentMouseMove = e => {
-    this.mapPositionToPoint(this.mouse, e.clientX, e.clientY);
-    let s = new i("mousemove", e);
-    this.interactiveObjects.forEach(t => {
-      this.dispatch(t, s);
-    });
-  };
-  onTouchMove = e => {
-    this.mapPositionToPoint(this.mouse, e.touches[0].clientX, e.touches[0].clientY);
-    let s = new i(this.treatTouchEventsAsMouseEvents ? "mousemove" : "touchmove", e);
-    this.interactiveObjects.forEach(t => {
-      this.dispatch(t, s);
-    });
-  };
-  onMouseClick = e => {
-    this.update();
-    let s = new i("click", e);
-    this.interactiveObjects.forEach(t => {
-      t.intersected && this.dispatch(t, s);
-    });
-  };
-  onMouseDown = e => {
-    this.mapPositionToPoint(this.mouse, e.clientX, e.clientY), this.update();
-    let s = new i("mousedown", e);
-    this.interactiveObjects.forEach(t => {
-      t.intersected && this.dispatch(t, s);
-    });
-  };
-  onTouchStart = e => {
-    this.mapPositionToPoint(this.mouse, e.touches[0].clientX, e.touches[0].clientY), this.update();
-    let s = new i(this.treatTouchEventsAsMouseEvents ? "mousedown" : "touchstart", e);
-    this.interactiveObjects.forEach(t => {
-      t.intersected && this.dispatch(t, s);
-    });
-  };
-  onMouseUp = e => {
-    let s = new i("mouseup", e);
-    this.interactiveObjects.forEach(t => {
-      this.dispatch(t, s);
-    });
-  };
-  onTouchEnd = e => {
-    this.mapPositionToPoint(this.mouse, e.touches[0].clientX, e.touches[0].clientY), this.update();
-    let s = new i(this.treatTouchEventsAsMouseEvents ? "mouseup" : "touchend", e);
-    this.interactiveObjects.forEach(t => {
-      this.dispatch(t, s);
-    });
-  };
-  dispatch = (e, s) => {
-    e.target && !s.cancelBubble && (s.coords = this.mouse, s.distance = e.distance, s.intersected = e.intersected, e.target.dispatchEvent(s));
-  };
-  mapPositionToPoint = (e, s, t) => {
-    let n = this.renderer.domElement.getBoundingClientRect();
-    e.x = (s - n.left) / n.width * 2 - 1, e.y = -((t - n.top) / n.height) * 2 + 1;
-  };
-};
-exports.InteractionManager = u;
-exports.InteractiveEvent = i;
-exports.InteractiveObject = c;
 },{"three":"node_modules/three/build/three.module.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
 require("regenerator-runtime/runtime.js");
+
+var THREE = _interopRequireWildcard(require("three"));
 
 var _createCube = _interopRequireDefault(require("./createCube"));
 
@@ -40537,16 +40357,91 @@ var _createRenderer = _interopRequireDefault(require("./createRenderer"));
 
 var _createScene = _interopRequireDefault(require("./createScene"));
 
-var THREE = _interopRequireWildcard(require("three"));
-
-var _three2 = require("three.interactive");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"regenerator-runtime/runtime.js":"node_modules/regenerator-runtime/runtime.js","./createCube":"js/createCube.js","./createLight":"js/createLight.js","./animate":"js/animate.js","./createCamera":"js/createCamera.js","./createRenderer":"js/createRenderer.js","./createScene":"js/createScene.js","three":"node_modules/three/build/three.module.js","three.interactive":"node_modules/three.interactive/build/three.interactive.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+// const TWEEN = require('@tweenjs/tween.js');
+var renderer = (0, _createRenderer.default)();
+var scene = (0, _createScene.default)();
+var camera = (0, _createCamera.default)(); // const interactionManager = new InteractionManager(
+//   renderer,
+//   camera,
+//   renderer.domElement
+// );
+
+var cubes = {
+  pink: (0, _createCube.default)({
+    color: 0xff00ce,
+    x: -1,
+    y: -1
+  }),
+  purple: (0, _createCube.default)({
+    color: 0x9300fb,
+    x: 1,
+    y: -1
+  }),
+  blue: (0, _createCube.default)({
+    color: 0x0065d9,
+    x: 1,
+    y: 1
+  }),
+  cyan: (0, _createCube.default)({
+    color: 0x00d7d0,
+    x: -1,
+    y: 1
+  })
+};
+var light = (0, _createLight.default)();
+
+var _loop = function _loop() {
+  var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+      name = _Object$entries$_i[0],
+      object = _Object$entries$_i[1];
+
+  object.addEventListener("click", function (event) {
+    event.stopPropagation();
+    console.log("".concat(name, " cube was clicked"));
+    var cube = event.target;
+    var coords = {
+      x: camera.position.x,
+      y: camera.position.y
+    }; // new TWEEN.Tween(coords)
+    //   .to({ x: cube.position.x, y: cube.position.y })
+    //   .easing(TWEEN.Easing.Quadratic.Out)
+    //   .onUpdate(() =>
+    //     camera.position.set(coords.x, coords.y, camera.position.z)
+    //   )
+    //   .start();
+  }); //   interactionManager.add(object);
+
+  scene.add(object);
+};
+
+for (var _i = 0, _Object$entries = Object.entries(cubes); _i < _Object$entries.length; _i++) {
+  _loop();
+}
+
+scene.add(light);
+(0, _animate.default)(function (time) {
+  renderer.render(scene, camera); //   interactionManager.update();
+  //   TWEEN.update(time);
+});
+},{"regenerator-runtime/runtime.js":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","./createCube":"js/createCube.js","./createLight":"js/createLight.js","./animate":"js/animate.js","./createCamera":"js/createCamera.js","./createRenderer":"js/createRenderer.js","./createScene":"js/createScene.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -40574,7 +40469,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57826" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58384" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
