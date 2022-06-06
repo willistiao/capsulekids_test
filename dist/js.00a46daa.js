@@ -875,29 +875,25 @@ try {
 }
 
 },{}],"node_modules/three/build/three.module.js":[function(require,module,exports) {
-var define;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.DynamicCopyUsage = exports.DstColorFactor = exports.DstAlphaFactor = exports.DoubleSide = exports.DodecahedronGeometry = exports.DodecahedronBufferGeometry = exports.DiscreteInterpolant = exports.DirectionalLightHelper = exports.DirectionalLight = exports.DepthTexture = exports.DepthStencilFormat = exports.DepthFormat = exports.DefaultLoadingManager = exports.DecrementWrapStencilOp = exports.DecrementStencilOp = exports.DataUtils = exports.DataTextureLoader = exports.DataTexture3D = exports.DataTexture2DArray = exports.DataTexture = exports.DataArrayTexture = exports.Data3DTexture = exports.Cylindrical = exports.CylinderGeometry = exports.CylinderBufferGeometry = exports.CustomToneMapping = exports.CustomBlending = exports.CurvePath = exports.Curve = exports.CullFaceNone = exports.CullFaceFrontBack = exports.CullFaceFront = exports.CullFaceBack = exports.CubicInterpolant = exports.CubicBezierCurve3 = exports.CubicBezierCurve = exports.CubeUVReflectionMapping = exports.CubeTextureLoader = exports.CubeTexture = exports.CubeRefractionMapping = exports.CubeReflectionMapping = exports.CubeCamera = exports.ConeGeometry = exports.ConeBufferGeometry = exports.CompressedTextureLoader = exports.CompressedTexture = exports.ColorManagement = exports.ColorKeyframeTrack = exports.Color = exports.Clock = exports.ClampToEdgeWrapping = exports.CircleGeometry = exports.CircleBufferGeometry = exports.CineonToneMapping = exports.CatmullRomCurve3 = exports.CapsuleGeometry = exports.CapsuleBufferGeometry = exports.CanvasTexture = exports.CameraHelper = exports.Camera = exports.Cache = exports.ByteType = exports.BufferGeometryLoader = exports.BufferGeometry = exports.BufferAttribute = exports.BoxHelper = exports.BoxGeometry = exports.BoxBufferGeometry = exports.Box3Helper = exports.Box3 = exports.Box2 = exports.BooleanKeyframeTrack = exports.Bone = exports.BasicShadowMap = exports.BasicDepthPacking = exports.BackSide = exports.AxesHelper = exports.AudioLoader = exports.AudioListener = exports.AudioContext = exports.AudioAnalyser = exports.Audio = exports.ArrowHelper = exports.ArrayCamera = exports.ArcCurve = exports.AnimationUtils = exports.AnimationObjectGroup = exports.AnimationMixer = exports.AnimationLoader = exports.AnimationClip = exports.AmbientLightProbe = exports.AmbientLight = exports.AlwaysStencilFunc = exports.AlwaysDepth = exports.AlphaFormat = exports.AdditiveBlending = exports.AdditiveAnimationBlendMode = exports.AddOperation = exports.AddEquation = exports.ACESFilmicToneMapping = void 0;
-exports.FogExp2 = exports.Fog = exports.FloatType = exports.Float64BufferAttribute = exports.Float32BufferAttribute = exports.Float16BufferAttribute = exports.FlatShading = exports.FileLoader = exports.ExtrudeGeometry = exports.ExtrudeBufferGeometry = exports.EventDispatcher = exports.Euler = exports.EquirectangularRefractionMapping = exports.EquirectangularReflectionMapping = exports.EqualStencilFunc = exports.EqualDepth = exports.EllipseCurve = exports.EdgesGeometry = exports.DynamicReadUsage = exports.DynamicDrawUsage = void 0;
 exports.Font = Font;
 exports.FontLoader = FontLoader;
-exports.ImageUtils = exports.ImageLoader = exports.ImageBitmapLoader = exports.IcosahedronGeometry = exports.IcosahedronBufferGeometry = exports.HemisphereLightProbe = exports.HemisphereLightHelper = exports.HemisphereLight = exports.HalfFloatType = exports.Group = exports.GridHelper = exports.GreaterStencilFunc = exports.GreaterEqualStencilFunc = exports.GreaterEqualDepth = exports.GreaterDepth = exports.GLSL3 = exports.GLSL1 = exports.GLBufferAttribute = exports.Frustum = exports.FrontSide = exports.FramebufferTexture = void 0;
 exports.ImmediateRenderObject = ImmediateRenderObject;
-exports.Material = exports.MOUSE = exports.LuminanceFormat = exports.LuminanceAlphaFormat = exports.LoopRepeat = exports.LoopPingPong = exports.LoopOnce = exports.LoadingManager = exports.LoaderUtils = exports.Loader = exports.LinearToneMapping = exports.LinearSRGBColorSpace = exports.LinearMipmapNearestFilter = exports.LinearMipmapLinearFilter = exports.LinearMipMapNearestFilter = exports.LinearMipMapLinearFilter = exports.LinearInterpolant = exports.LinearFilter = exports.LinearEncoding = exports.LineSegments = exports.LineLoop = exports.LineDashedMaterial = exports.LineCurve3 = exports.LineCurve = exports.LineBasicMaterial = exports.Line3 = exports.Line = exports.LightProbe = exports.Light = exports.LessStencilFunc = exports.LessEqualStencilFunc = exports.LessEqualDepth = exports.LessDepth = exports.Layers = exports.LatheGeometry = exports.LatheBufferGeometry = exports.LOD = exports.KeyframeTrack = exports.KeepStencilOp = exports.InvertStencilOp = exports.InterpolateSmooth = exports.InterpolateLinear = exports.InterpolateDiscrete = exports.Interpolant = exports.InterleavedBufferAttribute = exports.InterleavedBuffer = exports.IntType = exports.Int8BufferAttribute = exports.Int32BufferAttribute = exports.Int16BufferAttribute = exports.InstancedMesh = exports.InstancedInterleavedBuffer = exports.InstancedBufferGeometry = exports.InstancedBufferAttribute = exports.IncrementWrapStencilOp = exports.IncrementStencilOp = void 0;
-exports.RGB_ETC2_Format = exports.RGB_ETC1_Format = exports.RGBFormat = exports.RGBA_S3TC_DXT5_Format = exports.RGBA_S3TC_DXT3_Format = exports.RGBA_S3TC_DXT1_Format = exports.RGBA_PVRTC_4BPPV1_Format = exports.RGBA_PVRTC_2BPPV1_Format = exports.RGBA_ETC2_EAC_Format = exports.RGBA_BPTC_Format = exports.RGBA_ASTC_8x8_Format = exports.RGBA_ASTC_8x6_Format = exports.RGBA_ASTC_8x5_Format = exports.RGBA_ASTC_6x6_Format = exports.RGBA_ASTC_6x5_Format = exports.RGBA_ASTC_5x5_Format = exports.RGBA_ASTC_5x4_Format = exports.RGBA_ASTC_4x4_Format = exports.RGBA_ASTC_12x12_Format = exports.RGBA_ASTC_12x10_Format = exports.RGBA_ASTC_10x8_Format = exports.RGBA_ASTC_10x6_Format = exports.RGBA_ASTC_10x5_Format = exports.RGBA_ASTC_10x10_Format = exports.RGBAIntegerFormat = exports.RGBAFormat = exports.RGBADepthPacking = exports.REVISION = exports.QuaternionLinearInterpolant = exports.QuaternionKeyframeTrack = exports.Quaternion = exports.QuadraticBezierCurve3 = exports.QuadraticBezierCurve = exports.PropertyMixer = exports.PropertyBinding = exports.PositionalAudio = exports.PolyhedronGeometry = exports.PolyhedronBufferGeometry = exports.PolarGridHelper = exports.PointsMaterial = exports.Points = exports.PointLightHelper = exports.PointLight = exports.PlaneHelper = exports.PlaneGeometry = exports.PlaneBufferGeometry = exports.Plane = exports.PerspectiveCamera = exports.Path = exports.ParametricGeometry = exports.PMREMGenerator = exports.PCFSoftShadowMap = exports.PCFShadowMap = exports.OrthographicCamera = exports.OneMinusSrcColorFactor = exports.OneMinusSrcAlphaFactor = exports.OneMinusDstColorFactor = exports.OneMinusDstAlphaFactor = exports.OneFactor = exports.OctahedronGeometry = exports.OctahedronBufferGeometry = exports.ObjectSpaceNormalMap = exports.ObjectLoader = exports.Object3D = exports.NumberKeyframeTrack = exports.NotEqualStencilFunc = exports.NotEqualDepth = exports.NormalBlending = exports.NormalAnimationBlendMode = exports.NoToneMapping = exports.NoColorSpace = exports.NoBlending = exports.NeverStencilFunc = exports.NeverDepth = exports.NearestMipmapNearestFilter = exports.NearestMipmapLinearFilter = exports.NearestMipMapNearestFilter = exports.NearestMipMapLinearFilter = exports.NearestFilter = exports.MultiplyOperation = exports.MultiplyBlending = exports.MixOperation = exports.MirroredRepeatWrapping = exports.MinEquation = exports.MeshToonMaterial = exports.MeshStandardMaterial = exports.MeshPhysicalMaterial = exports.MeshPhongMaterial = exports.MeshNormalMaterial = exports.MeshMatcapMaterial = exports.MeshLambertMaterial = exports.MeshDistanceMaterial = exports.MeshDepthMaterial = exports.MeshBasicMaterial = exports.Mesh = exports.MaxEquation = exports.Matrix4 = exports.Matrix3 = exports.MathUtils = exports.MaterialLoader = void 0;
-exports.WebGLMultisampleRenderTarget = exports.WebGLMultipleRenderTargets = exports.WebGLCubeRenderTarget = exports.WebGLArrayRenderTarget = exports.WebGL3DRenderTarget = exports.WebGL1Renderer = exports.VideoTexture = exports.VectorKeyframeTrack = exports.Vector4 = exports.Vector3 = exports.Vector2 = exports.VSMShadowMap = exports.UnsignedShortType = exports.UnsignedShort5551Type = exports.UnsignedShort4444Type = exports.UnsignedIntType = exports.UnsignedInt248Type = exports.UnsignedByteType = exports.UniformsUtils = exports.UniformsLib = exports.Uniform = exports.Uint8ClampedBufferAttribute = exports.Uint8BufferAttribute = exports.Uint32BufferAttribute = exports.Uint16BufferAttribute = exports.UVMapping = exports.TubeGeometry = exports.TubeBufferGeometry = exports.TrianglesDrawMode = exports.TriangleStripDrawMode = exports.TriangleFanDrawMode = exports.Triangle = exports.TorusKnotGeometry = exports.TorusKnotBufferGeometry = exports.TorusGeometry = exports.TorusBufferGeometry = exports.TextureLoader = exports.Texture = exports.TextGeometry = exports.TetrahedronGeometry = exports.TetrahedronBufferGeometry = exports.TangentSpaceNormalMap = exports.TOUCH = exports.SubtractiveBlending = exports.SubtractEquation = exports.StringKeyframeTrack = exports.StreamReadUsage = exports.StreamDrawUsage = exports.StreamCopyUsage = exports.StereoCamera = exports.StaticReadUsage = exports.StaticDrawUsage = exports.StaticCopyUsage = exports.SrcColorFactor = exports.SrcAlphaSaturateFactor = exports.SrcAlphaFactor = exports.SpriteMaterial = exports.Sprite = exports.SpotLightHelper = exports.SpotLight = exports.SplineCurve = exports.SphericalHarmonics3 = exports.Spherical = exports.SphereGeometry = exports.SphereBufferGeometry = exports.Sphere = exports.Source = exports.SmoothShading = exports.SkinnedMesh = exports.SkeletonHelper = exports.Skeleton = exports.ShortType = exports.ShapeUtils = exports.ShapePath = exports.ShapeGeometry = exports.ShapeBufferGeometry = exports.Shape = exports.ShadowMaterial = exports.ShaderMaterial = exports.ShaderLib = exports.ShaderChunk = exports.Scene = exports.SRGBColorSpace = exports.RingGeometry = exports.RingBufferGeometry = exports.ReverseSubtractEquation = exports.ReplaceStencilOp = exports.RepeatWrapping = exports.ReinhardToneMapping = exports.RedIntegerFormat = exports.RedFormat = exports.RectAreaLight = exports.Raycaster = exports.Ray = exports.RawShaderMaterial = exports.RGIntegerFormat = exports.RGFormat = exports.RGB_S3TC_DXT1_Format = exports.RGB_PVRTC_4BPPV1_Format = exports.RGB_PVRTC_2BPPV1_Format = void 0;
-exports.WebGLRenderTarget = void 0;
 exports.WebGLRenderer = WebGLRenderer;
 exports.WebGLUtils = WebGLUtils;
-exports.sRGBEncoding = exports._SRGBAFormat = exports.ZeroStencilOp = exports.ZeroSlopeEnding = exports.ZeroFactor = exports.ZeroCurvatureEnding = exports.WrapAroundEnding = exports.WireframeGeometry = void 0;
+exports.DynamicCopyUsage = exports.DstColorFactor = exports.DstAlphaFactor = exports.DoubleSide = exports.DodecahedronGeometry = exports.DodecahedronBufferGeometry = exports.DiscreteInterpolant = exports.DirectionalLightHelper = exports.DirectionalLight = exports.DepthTexture = exports.DepthStencilFormat = exports.DepthFormat = exports.DefaultLoadingManager = exports.DecrementWrapStencilOp = exports.DecrementStencilOp = exports.DataUtils = exports.DataTextureLoader = exports.DataTexture3D = exports.DataTexture2DArray = exports.DataTexture = exports.DataArrayTexture = exports.Data3DTexture = exports.Cylindrical = exports.CylinderGeometry = exports.CylinderBufferGeometry = exports.CustomToneMapping = exports.CustomBlending = exports.CurvePath = exports.Curve = exports.CullFaceNone = exports.CullFaceFrontBack = exports.CullFaceFront = exports.CullFaceBack = exports.CubicInterpolant = exports.CubicBezierCurve3 = exports.CubicBezierCurve = exports.CubeUVReflectionMapping = exports.CubeTextureLoader = exports.CubeTexture = exports.CubeRefractionMapping = exports.CubeReflectionMapping = exports.CubeCamera = exports.ConeGeometry = exports.ConeBufferGeometry = exports.CompressedTextureLoader = exports.CompressedTexture = exports.ColorManagement = exports.ColorKeyframeTrack = exports.Color = exports.Clock = exports.ClampToEdgeWrapping = exports.CircleGeometry = exports.CircleBufferGeometry = exports.CineonToneMapping = exports.CatmullRomCurve3 = exports.CapsuleGeometry = exports.CapsuleBufferGeometry = exports.CanvasTexture = exports.CameraHelper = exports.Camera = exports.Cache = exports.ByteType = exports.BufferGeometryLoader = exports.BufferGeometry = exports.BufferAttribute = exports.BoxHelper = exports.BoxGeometry = exports.BoxBufferGeometry = exports.Box3Helper = exports.Box3 = exports.Box2 = exports.BooleanKeyframeTrack = exports.Bone = exports.BasicShadowMap = exports.BasicDepthPacking = exports.BackSide = exports.AxesHelper = exports.AudioLoader = exports.AudioListener = exports.AudioContext = exports.AudioAnalyser = exports.Audio = exports.ArrowHelper = exports.ArrayCamera = exports.ArcCurve = exports.AnimationUtils = exports.AnimationObjectGroup = exports.AnimationMixer = exports.AnimationLoader = exports.AnimationClip = exports.AmbientLightProbe = exports.AmbientLight = exports.AlwaysStencilFunc = exports.AlwaysDepth = exports.AlphaFormat = exports.AdditiveBlending = exports.AdditiveAnimationBlendMode = exports.AddOperation = exports.AddEquation = exports.ACESFilmicToneMapping = void 0;
+exports.Matrix3 = exports.MathUtils = exports.MaterialLoader = exports.Material = exports.MOUSE = exports.LuminanceFormat = exports.LuminanceAlphaFormat = exports.LoopRepeat = exports.LoopPingPong = exports.LoopOnce = exports.LoadingManager = exports.LoaderUtils = exports.Loader = exports.LinearToneMapping = exports.LinearSRGBColorSpace = exports.LinearMipmapNearestFilter = exports.LinearMipmapLinearFilter = exports.LinearMipMapNearestFilter = exports.LinearMipMapLinearFilter = exports.LinearInterpolant = exports.LinearFilter = exports.LinearEncoding = exports.LineSegments = exports.LineLoop = exports.LineDashedMaterial = exports.LineCurve3 = exports.LineCurve = exports.LineBasicMaterial = exports.Line3 = exports.Line = exports.LightProbe = exports.Light = exports.LessStencilFunc = exports.LessEqualStencilFunc = exports.LessEqualDepth = exports.LessDepth = exports.Layers = exports.LatheGeometry = exports.LatheBufferGeometry = exports.LOD = exports.KeyframeTrack = exports.KeepStencilOp = exports.InvertStencilOp = exports.InterpolateSmooth = exports.InterpolateLinear = exports.InterpolateDiscrete = exports.Interpolant = exports.InterleavedBufferAttribute = exports.InterleavedBuffer = exports.IntType = exports.Int8BufferAttribute = exports.Int32BufferAttribute = exports.Int16BufferAttribute = exports.InstancedMesh = exports.InstancedInterleavedBuffer = exports.InstancedBufferGeometry = exports.InstancedBufferAttribute = exports.IncrementWrapStencilOp = exports.IncrementStencilOp = exports.ImageUtils = exports.ImageLoader = exports.ImageBitmapLoader = exports.IcosahedronGeometry = exports.IcosahedronBufferGeometry = exports.HemisphereLightProbe = exports.HemisphereLightHelper = exports.HemisphereLight = exports.HalfFloatType = exports.Group = exports.GridHelper = exports.GreaterStencilFunc = exports.GreaterEqualStencilFunc = exports.GreaterEqualDepth = exports.GreaterDepth = exports.GLSL3 = exports.GLSL1 = exports.GLBufferAttribute = exports.Frustum = exports.FrontSide = exports.FramebufferTexture = exports.FogExp2 = exports.Fog = exports.FloatType = exports.Float64BufferAttribute = exports.Float32BufferAttribute = exports.Float16BufferAttribute = exports.FlatShading = exports.FileLoader = exports.ExtrudeGeometry = exports.ExtrudeBufferGeometry = exports.EventDispatcher = exports.Euler = exports.EquirectangularRefractionMapping = exports.EquirectangularReflectionMapping = exports.EqualStencilFunc = exports.EqualDepth = exports.EllipseCurve = exports.EdgesGeometry = exports.DynamicReadUsage = exports.DynamicDrawUsage = void 0;
+exports.RGB_S3TC_DXT1_Format = exports.RGB_PVRTC_4BPPV1_Format = exports.RGB_PVRTC_2BPPV1_Format = exports.RGB_ETC2_Format = exports.RGB_ETC1_Format = exports.RGBFormat = exports.RGBA_S3TC_DXT5_Format = exports.RGBA_S3TC_DXT3_Format = exports.RGBA_S3TC_DXT1_Format = exports.RGBA_PVRTC_4BPPV1_Format = exports.RGBA_PVRTC_2BPPV1_Format = exports.RGBA_ETC2_EAC_Format = exports.RGBA_BPTC_Format = exports.RGBA_ASTC_8x8_Format = exports.RGBA_ASTC_8x6_Format = exports.RGBA_ASTC_8x5_Format = exports.RGBA_ASTC_6x6_Format = exports.RGBA_ASTC_6x5_Format = exports.RGBA_ASTC_5x5_Format = exports.RGBA_ASTC_5x4_Format = exports.RGBA_ASTC_4x4_Format = exports.RGBA_ASTC_12x12_Format = exports.RGBA_ASTC_12x10_Format = exports.RGBA_ASTC_10x8_Format = exports.RGBA_ASTC_10x6_Format = exports.RGBA_ASTC_10x5_Format = exports.RGBA_ASTC_10x10_Format = exports.RGBAIntegerFormat = exports.RGBAFormat = exports.RGBADepthPacking = exports.REVISION = exports.QuaternionLinearInterpolant = exports.QuaternionKeyframeTrack = exports.Quaternion = exports.QuadraticBezierCurve3 = exports.QuadraticBezierCurve = exports.PropertyMixer = exports.PropertyBinding = exports.PositionalAudio = exports.PolyhedronGeometry = exports.PolyhedronBufferGeometry = exports.PolarGridHelper = exports.PointsMaterial = exports.Points = exports.PointLightHelper = exports.PointLight = exports.PlaneHelper = exports.PlaneGeometry = exports.PlaneBufferGeometry = exports.Plane = exports.PerspectiveCamera = exports.Path = exports.ParametricGeometry = exports.PMREMGenerator = exports.PCFSoftShadowMap = exports.PCFShadowMap = exports.OrthographicCamera = exports.OneMinusSrcColorFactor = exports.OneMinusSrcAlphaFactor = exports.OneMinusDstColorFactor = exports.OneMinusDstAlphaFactor = exports.OneFactor = exports.OctahedronGeometry = exports.OctahedronBufferGeometry = exports.ObjectSpaceNormalMap = exports.ObjectLoader = exports.Object3D = exports.NumberKeyframeTrack = exports.NotEqualStencilFunc = exports.NotEqualDepth = exports.NormalBlending = exports.NormalAnimationBlendMode = exports.NoToneMapping = exports.NoColorSpace = exports.NoBlending = exports.NeverStencilFunc = exports.NeverDepth = exports.NearestMipmapNearestFilter = exports.NearestMipmapLinearFilter = exports.NearestMipMapNearestFilter = exports.NearestMipMapLinearFilter = exports.NearestFilter = exports.MultiplyOperation = exports.MultiplyBlending = exports.MixOperation = exports.MirroredRepeatWrapping = exports.MinEquation = exports.MeshToonMaterial = exports.MeshStandardMaterial = exports.MeshPhysicalMaterial = exports.MeshPhongMaterial = exports.MeshNormalMaterial = exports.MeshMatcapMaterial = exports.MeshLambertMaterial = exports.MeshDistanceMaterial = exports.MeshDepthMaterial = exports.MeshBasicMaterial = exports.Mesh = exports.MaxEquation = exports.Matrix4 = void 0;
+exports.WrapAroundEnding = exports.WireframeGeometry = exports.WebGLRenderTarget = exports.WebGLMultisampleRenderTarget = exports.WebGLMultipleRenderTargets = exports.WebGLCubeRenderTarget = exports.WebGLArrayRenderTarget = exports.WebGL3DRenderTarget = exports.WebGL1Renderer = exports.VideoTexture = exports.VectorKeyframeTrack = exports.Vector4 = exports.Vector3 = exports.Vector2 = exports.VSMShadowMap = exports.UnsignedShortType = exports.UnsignedShort5551Type = exports.UnsignedShort4444Type = exports.UnsignedIntType = exports.UnsignedInt248Type = exports.UnsignedByteType = exports.UniformsUtils = exports.UniformsLib = exports.Uniform = exports.Uint8ClampedBufferAttribute = exports.Uint8BufferAttribute = exports.Uint32BufferAttribute = exports.Uint16BufferAttribute = exports.UVMapping = exports.TubeGeometry = exports.TubeBufferGeometry = exports.TrianglesDrawMode = exports.TriangleStripDrawMode = exports.TriangleFanDrawMode = exports.Triangle = exports.TorusKnotGeometry = exports.TorusKnotBufferGeometry = exports.TorusGeometry = exports.TorusBufferGeometry = exports.TextureLoader = exports.Texture = exports.TextGeometry = exports.TetrahedronGeometry = exports.TetrahedronBufferGeometry = exports.TangentSpaceNormalMap = exports.TOUCH = exports.SubtractiveBlending = exports.SubtractEquation = exports.StringKeyframeTrack = exports.StreamReadUsage = exports.StreamDrawUsage = exports.StreamCopyUsage = exports.StereoCamera = exports.StaticReadUsage = exports.StaticDrawUsage = exports.StaticCopyUsage = exports.SrcColorFactor = exports.SrcAlphaSaturateFactor = exports.SrcAlphaFactor = exports.SpriteMaterial = exports.Sprite = exports.SpotLightHelper = exports.SpotLight = exports.SplineCurve = exports.SphericalHarmonics3 = exports.Spherical = exports.SphereGeometry = exports.SphereBufferGeometry = exports.Sphere = exports.Source = exports.SmoothShading = exports.SkinnedMesh = exports.SkeletonHelper = exports.Skeleton = exports.ShortType = exports.ShapeUtils = exports.ShapePath = exports.ShapeGeometry = exports.ShapeBufferGeometry = exports.Shape = exports.ShadowMaterial = exports.ShaderMaterial = exports.ShaderLib = exports.ShaderChunk = exports.Scene = exports.SRGBColorSpace = exports.RingGeometry = exports.RingBufferGeometry = exports.ReverseSubtractEquation = exports.ReplaceStencilOp = exports.RepeatWrapping = exports.ReinhardToneMapping = exports.RedIntegerFormat = exports.RedFormat = exports.RectAreaLight = exports.Raycaster = exports.Ray = exports.RawShaderMaterial = exports.RGIntegerFormat = exports.RGFormat = void 0;
+exports.sRGBEncoding = exports._SRGBAFormat = exports.ZeroStencilOp = exports.ZeroSlopeEnding = exports.ZeroFactor = exports.ZeroCurvatureEnding = void 0;
 
 var _FN;
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -925,13 +921,13 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _get() { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get.bind(); } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(arguments.length < 3 ? target : receiver); } return desc.value; }; } return _get.apply(this, arguments); }
+function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
 
 function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -941,17 +937,15 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 /**
  * @license
@@ -1446,7 +1440,8 @@ function damp(x, y, lambda, dt) {
 } // https://www.desmos.com/calculator/vcsjnyz7x4
 
 
-function pingpong(x, length = 1) {
+function pingpong(x) {
+  var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
   return length - Math.abs(euclideanModulo(x, length * 2) - length);
 } // http://en.wikipedia.org/wiki/Smoothstep
 
@@ -1630,7 +1625,10 @@ var MathUtils = /*#__PURE__*/Object.freeze({
 exports.MathUtils = MathUtils;
 
 var Vector2 = /*#__PURE__*/function (_Symbol$iterator) {
-  function Vector2(x = 0, y = 0) {
+  function Vector2() {
+    var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
     _classCallCheck(this, Vector2);
 
     this.isVector2 = true;
@@ -1969,14 +1967,17 @@ var Vector2 = /*#__PURE__*/function (_Symbol$iterator) {
     }
   }, {
     key: "fromArray",
-    value: function fromArray(array, offset = 0) {
+    value: function fromArray(array) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       this.x = array[offset];
       this.y = array[offset + 1];
       return this;
     }
   }, {
     key: "toArray",
-    value: function toArray(array = [], offset = 0) {
+    value: function toArray() {
+      var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       array[offset] = this.x;
       array[offset + 1] = this.y;
       return array;
@@ -2012,8 +2013,8 @@ var Vector2 = /*#__PURE__*/function (_Symbol$iterator) {
     }
   }, {
     key: _Symbol$iterator,
-    value: /*#__PURE__*/_regeneratorRuntime().mark(function value() {
-      return _regeneratorRuntime().wrap(function value$(_context2) {
+    value: /*#__PURE__*/regeneratorRuntime.mark(function value() {
+      return regeneratorRuntime.wrap(function value$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
@@ -2309,7 +2310,9 @@ var Matrix3 = /*#__PURE__*/function () {
     }
   }, {
     key: "fromArray",
-    value: function fromArray(array, offset = 0) {
+    value: function fromArray(array) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
       for (var _i2 = 0; _i2 < 9; _i2++) {
         this.elements[_i2] = array[_i2 + offset];
       }
@@ -2318,7 +2321,9 @@ var Matrix3 = /*#__PURE__*/function () {
     }
   }, {
     key: "toArray",
-    value: function toArray(array = [], offset = 0) {
+    value: function toArray() {
+      var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       var te = this.elements;
       array[offset] = te[0];
       array[offset + 1] = te[1];
@@ -2639,7 +2644,8 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "setHex",
-    value: function setHex(hex, colorSpace = SRGBColorSpace) {
+    value: function setHex(hex) {
+      var colorSpace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : SRGBColorSpace;
       hex = Math.floor(hex);
       this.r = (hex >> 16 & 255) / 255;
       this.g = (hex >> 8 & 255) / 255;
@@ -2649,7 +2655,8 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "setRGB",
-    value: function setRGB(r, g, b, colorSpace = LinearSRGBColorSpace) {
+    value: function setRGB(r, g, b) {
+      var colorSpace = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : LinearSRGBColorSpace;
       this.r = r;
       this.g = g;
       this.b = b;
@@ -2658,7 +2665,8 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "setHSL",
-    value: function setHSL(h, s, l, colorSpace = LinearSRGBColorSpace) {
+    value: function setHSL(h, s, l) {
+      var colorSpace = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : LinearSRGBColorSpace;
       // h,s,l ranges are in 0.0 - 1.0
       h = euclideanModulo(h, 1);
       s = clamp(s, 0, 1);
@@ -2679,7 +2687,9 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "setStyle",
-    value: function setStyle(style, colorSpace = SRGBColorSpace) {
+    value: function setStyle(style) {
+      var colorSpace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : SRGBColorSpace;
+
       function handleAlpha(string) {
         if (string === undefined) return;
 
@@ -2764,7 +2774,9 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "setColorName",
-    value: function setColorName(style, colorSpace = SRGBColorSpace) {
+    value: function setColorName(style) {
+      var colorSpace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : SRGBColorSpace;
+
       // color keywords
       var hex = _colorKeywords[style.toLowerCase()];
 
@@ -2821,18 +2833,21 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "getHex",
-    value: function getHex(colorSpace = SRGBColorSpace) {
+    value: function getHex() {
+      var colorSpace = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : SRGBColorSpace;
       ColorManagement.fromWorkingColorSpace(toComponents(this, _rgb), colorSpace);
       return clamp(_rgb.r * 255, 0, 255) << 16 ^ clamp(_rgb.g * 255, 0, 255) << 8 ^ clamp(_rgb.b * 255, 0, 255) << 0;
     }
   }, {
     key: "getHexString",
-    value: function getHexString(colorSpace = SRGBColorSpace) {
+    value: function getHexString() {
+      var colorSpace = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : SRGBColorSpace;
       return ('000000' + this.getHex(colorSpace).toString(16)).slice(-6);
     }
   }, {
     key: "getHSL",
-    value: function getHSL(target, colorSpace = LinearSRGBColorSpace) {
+    value: function getHSL(target) {
+      var colorSpace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : LinearSRGBColorSpace;
       // h,s,l ranges are in 0.0 - 1.0
       ColorManagement.fromWorkingColorSpace(toComponents(this, _rgb), colorSpace);
       var r = _rgb.r,
@@ -2874,7 +2889,8 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "getRGB",
-    value: function getRGB(target, colorSpace = LinearSRGBColorSpace) {
+    value: function getRGB(target) {
+      var colorSpace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : LinearSRGBColorSpace;
       ColorManagement.fromWorkingColorSpace(toComponents(this, _rgb), colorSpace);
       target.r = _rgb.r;
       target.g = _rgb.g;
@@ -2883,7 +2899,8 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "getStyle",
-    value: function getStyle(colorSpace = SRGBColorSpace) {
+    value: function getStyle() {
+      var colorSpace = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : SRGBColorSpace;
       ColorManagement.fromWorkingColorSpace(toComponents(this, _rgb), colorSpace);
 
       if (colorSpace !== SRGBColorSpace) {
@@ -2985,7 +3002,8 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "fromArray",
-    value: function fromArray(array, offset = 0) {
+    value: function fromArray(array) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       this.r = array[offset];
       this.g = array[offset + 1];
       this.b = array[offset + 2];
@@ -2993,7 +3011,9 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: "toArray",
-    value: function toArray(array = [], offset = 0) {
+    value: function toArray() {
+      var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       array[offset] = this.r;
       array[offset + 1] = this.g;
       array[offset + 2] = this.b;
@@ -3022,8 +3042,8 @@ var Color = /*#__PURE__*/function (_Symbol$iterator2) {
     }
   }, {
     key: _Symbol$iterator2,
-    value: /*#__PURE__*/_regeneratorRuntime().mark(function value() {
-      return _regeneratorRuntime().wrap(function value$(_context3) {
+    value: /*#__PURE__*/regeneratorRuntime.mark(function value() {
+      return regeneratorRuntime.wrap(function value$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
@@ -3146,7 +3166,9 @@ var ImageUtils = /*#__PURE__*/function () {
 exports.ImageUtils = ImageUtils;
 
 var Source = /*#__PURE__*/function () {
-  function Source(data = null) {
+  function Source() {
+    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
     _classCallCheck(this, Source);
 
     this.isSource = true;
@@ -3237,8 +3259,19 @@ var Texture = /*#__PURE__*/function (_EventDispatcher) {
 
   var _super = _createSuper(Texture);
 
-  function Texture(image = Texture.DEFAULT_IMAGE, mapping = Texture.DEFAULT_MAPPING, wrapS = ClampToEdgeWrapping, wrapT = ClampToEdgeWrapping, magFilter = LinearFilter, minFilter = LinearMipmapLinearFilter, format = RGBAFormat, type = UnsignedByteType, anisotropy = 1, encoding = LinearEncoding) {
+  function Texture() {
     var _this2;
+
+    var image = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Texture.DEFAULT_IMAGE;
+    var mapping = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Texture.DEFAULT_MAPPING;
+    var wrapS = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ClampToEdgeWrapping;
+    var wrapT = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ClampToEdgeWrapping;
+    var magFilter = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : LinearFilter;
+    var minFilter = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : LinearMipmapLinearFilter;
+    var format = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : RGBAFormat;
+    var type = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : UnsignedByteType;
+    var anisotropy = arguments.length > 8 && arguments[8] !== undefined ? arguments[8] : 1;
+    var encoding = arguments.length > 9 && arguments[9] !== undefined ? arguments[9] : LinearEncoding;
 
     _classCallCheck(this, Texture);
 
@@ -3455,7 +3488,12 @@ Texture.DEFAULT_IMAGE = null;
 Texture.DEFAULT_MAPPING = UVMapping;
 
 var Vector4 = /*#__PURE__*/function (_Symbol$iterator3) {
-  function Vector4(x = 0, y = 0, z = 0, w = 1) {
+  function Vector4() {
+    var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var z = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    var w = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+
     _classCallCheck(this, Vector4);
 
     this.isVector4 = true;
@@ -3948,7 +3986,8 @@ var Vector4 = /*#__PURE__*/function (_Symbol$iterator3) {
     }
   }, {
     key: "fromArray",
-    value: function fromArray(array, offset = 0) {
+    value: function fromArray(array) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       this.x = array[offset];
       this.y = array[offset + 1];
       this.z = array[offset + 2];
@@ -3957,7 +3996,9 @@ var Vector4 = /*#__PURE__*/function (_Symbol$iterator3) {
     }
   }, {
     key: "toArray",
-    value: function toArray(array = [], offset = 0) {
+    value: function toArray() {
+      var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       array[offset] = this.x;
       array[offset + 1] = this.y;
       array[offset + 2] = this.z;
@@ -3988,8 +4029,8 @@ var Vector4 = /*#__PURE__*/function (_Symbol$iterator3) {
     }
   }, {
     key: _Symbol$iterator3,
-    value: /*#__PURE__*/_regeneratorRuntime().mark(function value() {
-      return _regeneratorRuntime().wrap(function value$(_context4) {
+    value: /*#__PURE__*/regeneratorRuntime.mark(function value() {
+      return regeneratorRuntime.wrap(function value$(_context4) {
         while (1) {
           switch (_context4.prev = _context4.next) {
             case 0:
@@ -4033,8 +4074,10 @@ var WebGLRenderTarget = /*#__PURE__*/function (_EventDispatcher2) {
 
   var _super2 = _createSuper(WebGLRenderTarget);
 
-  function WebGLRenderTarget(width, height, options = {}) {
+  function WebGLRenderTarget(width, height) {
     var _this3;
+
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
     _classCallCheck(this, WebGLRenderTarget);
 
@@ -4066,7 +4109,9 @@ var WebGLRenderTarget = /*#__PURE__*/function (_EventDispatcher2) {
 
   _createClass(WebGLRenderTarget, [{
     key: "setSize",
-    value: function setSize(width, height, depth = 1) {
+    value: function setSize(width, height) {
+      var depth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
       if (this.width !== width || this.height !== height || this.depth !== depth) {
         this.width = width;
         this.height = height;
@@ -4122,8 +4167,13 @@ var DataArrayTexture = /*#__PURE__*/function (_Texture) {
 
   var _super3 = _createSuper(DataArrayTexture);
 
-  function DataArrayTexture(data = null, width = 1, height = 1, depth = 1) {
+  function DataArrayTexture() {
     var _this4;
+
+    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var width = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var height = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var depth = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
 
     _classCallCheck(this, DataArrayTexture);
 
@@ -4144,7 +4194,7 @@ var DataArrayTexture = /*#__PURE__*/function (_Texture) {
     return _this4;
   }
 
-  return _createClass(DataArrayTexture);
+  return DataArrayTexture;
 }(Texture);
 
 exports.DataArrayTexture = DataArrayTexture;
@@ -4167,7 +4217,7 @@ var WebGLArrayRenderTarget = /*#__PURE__*/function (_WebGLRenderTarget) {
     return _this5;
   }
 
-  return _createClass(WebGLArrayRenderTarget);
+  return WebGLArrayRenderTarget;
 }(WebGLRenderTarget);
 
 exports.WebGLArrayRenderTarget = WebGLArrayRenderTarget;
@@ -4177,8 +4227,13 @@ var Data3DTexture = /*#__PURE__*/function (_Texture2) {
 
   var _super5 = _createSuper(Data3DTexture);
 
-  function Data3DTexture(data = null, width = 1, height = 1, depth = 1) {
+  function Data3DTexture() {
     var _this6;
+
+    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var width = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var height = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var depth = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
 
     _classCallCheck(this, Data3DTexture);
 
@@ -4206,7 +4261,7 @@ var Data3DTexture = /*#__PURE__*/function (_Texture2) {
     return _this6;
   }
 
-  return _createClass(Data3DTexture);
+  return Data3DTexture;
 }(Texture);
 
 exports.Data3DTexture = Data3DTexture;
@@ -4229,7 +4284,7 @@ var WebGL3DRenderTarget = /*#__PURE__*/function (_WebGLRenderTarget2) {
     return _this7;
   }
 
-  return _createClass(WebGL3DRenderTarget);
+  return WebGL3DRenderTarget;
 }(WebGLRenderTarget);
 
 exports.WebGL3DRenderTarget = WebGL3DRenderTarget;
@@ -4239,8 +4294,10 @@ var WebGLMultipleRenderTargets = /*#__PURE__*/function (_WebGLRenderTarget3) {
 
   var _super7 = _createSuper(WebGLMultipleRenderTargets);
 
-  function WebGLMultipleRenderTargets(width, height, count, options = {}) {
+  function WebGLMultipleRenderTargets(width, height, count) {
     var _this8;
+
+    var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
 
     _classCallCheck(this, WebGLMultipleRenderTargets);
 
@@ -4259,7 +4316,9 @@ var WebGLMultipleRenderTargets = /*#__PURE__*/function (_WebGLRenderTarget3) {
 
   _createClass(WebGLMultipleRenderTargets, [{
     key: "setSize",
-    value: function setSize(width, height, depth = 1) {
+    value: function setSize(width, height) {
+      var depth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
       if (this.width !== width || this.height !== height || this.depth !== depth) {
         this.width = width;
         this.height = height;
@@ -4307,7 +4366,12 @@ var WebGLMultipleRenderTargets = /*#__PURE__*/function (_WebGLRenderTarget3) {
 exports.WebGLMultipleRenderTargets = WebGLMultipleRenderTargets;
 
 var Quaternion = /*#__PURE__*/function (_Symbol$iterator4) {
-  function Quaternion(x = 0, y = 0, z = 0, w = 1) {
+  function Quaternion() {
+    var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var z = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    var w = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+
     _classCallCheck(this, Quaternion);
 
     this.isQuaternion = true;
@@ -4748,7 +4812,8 @@ var Quaternion = /*#__PURE__*/function (_Symbol$iterator4) {
     }
   }, {
     key: "fromArray",
-    value: function fromArray(array, offset = 0) {
+    value: function fromArray(array) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       this._x = array[offset];
       this._y = array[offset + 1];
       this._z = array[offset + 2];
@@ -4760,7 +4825,9 @@ var Quaternion = /*#__PURE__*/function (_Symbol$iterator4) {
     }
   }, {
     key: "toArray",
-    value: function toArray(array = [], offset = 0) {
+    value: function toArray() {
+      var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       array[offset] = this._x;
       array[offset + 1] = this._y;
       array[offset + 2] = this._z;
@@ -4787,8 +4854,8 @@ var Quaternion = /*#__PURE__*/function (_Symbol$iterator4) {
     value: function _onChangeCallback() {}
   }, {
     key: _Symbol$iterator4,
-    value: /*#__PURE__*/_regeneratorRuntime().mark(function value() {
-      return _regeneratorRuntime().wrap(function value$(_context5) {
+    value: /*#__PURE__*/regeneratorRuntime.mark(function value() {
+      return regeneratorRuntime.wrap(function value$(_context5) {
         while (1) {
           switch (_context5.prev = _context5.next) {
             case 0:
@@ -4907,7 +4974,11 @@ var Quaternion = /*#__PURE__*/function (_Symbol$iterator4) {
 exports.Quaternion = Quaternion;
 
 var Vector3 = /*#__PURE__*/function (_Symbol$iterator5) {
-  function Vector3(x = 0, y = 0, z = 0) {
+  function Vector3() {
+    var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var z = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+
     _classCallCheck(this, Vector3);
 
     this.isVector3 = true;
@@ -5472,7 +5543,8 @@ var Vector3 = /*#__PURE__*/function (_Symbol$iterator5) {
     }
   }, {
     key: "fromArray",
-    value: function fromArray(array, offset = 0) {
+    value: function fromArray(array) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       this.x = array[offset];
       this.y = array[offset + 1];
       this.z = array[offset + 2];
@@ -5480,7 +5552,9 @@ var Vector3 = /*#__PURE__*/function (_Symbol$iterator5) {
     }
   }, {
     key: "toArray",
-    value: function toArray(array = [], offset = 0) {
+    value: function toArray() {
+      var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       array[offset] = this.x;
       array[offset + 1] = this.y;
       array[offset + 2] = this.z;
@@ -5520,8 +5594,8 @@ var Vector3 = /*#__PURE__*/function (_Symbol$iterator5) {
     }
   }, {
     key: _Symbol$iterator5,
-    value: /*#__PURE__*/_regeneratorRuntime().mark(function value() {
-      return _regeneratorRuntime().wrap(function value$(_context6) {
+    value: /*#__PURE__*/regeneratorRuntime.mark(function value() {
+      return regeneratorRuntime.wrap(function value$(_context6) {
         while (1) {
           switch (_context6.prev = _context6.next) {
             case 0:
@@ -5555,7 +5629,10 @@ var _vector$c = /*@__PURE__*/new Vector3();
 var _quaternion$4 = /*@__PURE__*/new Quaternion();
 
 var Box3 = /*#__PURE__*/function () {
-  function Box3(min = new Vector3(+Infinity, +Infinity, +Infinity), max = new Vector3(-Infinity, -Infinity, -Infinity)) {
+  function Box3() {
+    var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3(+Infinity, +Infinity, +Infinity);
+    var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3(-Infinity, -Infinity, -Infinity);
+
     _classCallCheck(this, Box3);
 
     this.isBox3 = true;
@@ -5644,7 +5721,8 @@ var Box3 = /*#__PURE__*/function () {
     }
   }, {
     key: "setFromObject",
-    value: function setFromObject(object, precise = false) {
+    value: function setFromObject(object) {
+      var precise = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
       this.makeEmpty();
       return this.expandByObject(object, precise);
     }
@@ -5706,7 +5784,8 @@ var Box3 = /*#__PURE__*/function () {
     }
   }, {
     key: "expandByObject",
-    value: function expandByObject(object, precise = false) {
+    value: function expandByObject(object) {
+      var precise = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
       // Computes the world-axis-aligned bounding box of an object (including its children),
       // accounting for both the object's, and children's, world transforms
       object.updateWorldMatrix(false, false);
@@ -5999,7 +6078,10 @@ var _toFarthestPoint = /*@__PURE__*/new Vector3();
 var _toPoint = /*@__PURE__*/new Vector3();
 
 var Sphere = /*#__PURE__*/function () {
-  function Sphere(center = new Vector3(), radius = -1) {
+  function Sphere() {
+    var center = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3();
+    var radius = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -1;
+
     _classCallCheck(this, Sphere);
 
     this.center = center;
@@ -6186,7 +6268,10 @@ var _edge2 = /*@__PURE__*/new Vector3();
 var _normal$1 = /*@__PURE__*/new Vector3();
 
 var Ray = /*#__PURE__*/function () {
-  function Ray(origin = new Vector3(), direction = new Vector3(0, 0, -1)) {
+  function Ray() {
+    var origin = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3();
+    var direction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3(0, 0, -1);
+
     _classCallCheck(this, Ray);
 
     this.origin = origin;
@@ -7298,7 +7383,9 @@ var Matrix4 = /*#__PURE__*/function () {
     }
   }, {
     key: "fromArray",
-    value: function fromArray(array, offset = 0) {
+    value: function fromArray(array) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
       for (var _i18 = 0; _i18 < 16; _i18++) {
         this.elements[_i18] = array[_i18 + offset];
       }
@@ -7307,7 +7394,9 @@ var Matrix4 = /*#__PURE__*/function () {
     }
   }, {
     key: "toArray",
-    value: function toArray(array = [], offset = 0) {
+    value: function toArray() {
+      var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       var te = this.elements;
       array[offset] = te[0];
       array[offset + 1] = te[1];
@@ -7353,7 +7442,12 @@ var _matrix$1 = /*@__PURE__*/new Matrix4();
 var _quaternion$3 = /*@__PURE__*/new Quaternion();
 
 var Euler = /*#__PURE__*/function (_Symbol$iterator6) {
-  function Euler(x = 0, y = 0, z = 0, order = Euler.DefaultOrder) {
+  function Euler() {
+    var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var z = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    var order = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : Euler.DefaultOrder;
+
     _classCallCheck(this, Euler);
 
     this.isEuler = true;
@@ -7405,7 +7499,8 @@ var Euler = /*#__PURE__*/function (_Symbol$iterator6) {
     }
   }, {
     key: "set",
-    value: function set(x, y, z, order = this._order) {
+    value: function set(x, y, z) {
+      var order = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : this._order;
       this._x = x;
       this._y = y;
       this._z = z;
@@ -7434,7 +7529,9 @@ var Euler = /*#__PURE__*/function (_Symbol$iterator6) {
     }
   }, {
     key: "setFromRotationMatrix",
-    value: function setFromRotationMatrix(m, order = this._order, update = true) {
+    value: function setFromRotationMatrix(m) {
+      var order = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._order;
+      var update = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
       // assumes the upper 3x3 of m is a pure rotation matrix (i.e, unscaled)
       var te = m.elements;
       var m11 = te[0],
@@ -7543,7 +7640,8 @@ var Euler = /*#__PURE__*/function (_Symbol$iterator6) {
     }
   }, {
     key: "setFromVector3",
-    value: function setFromVector3(v, order = this._order) {
+    value: function setFromVector3(v) {
+      var order = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._order;
       return this.set(v.x, v.y, v.z, order);
     }
   }, {
@@ -7573,7 +7671,9 @@ var Euler = /*#__PURE__*/function (_Symbol$iterator6) {
     }
   }, {
     key: "toArray",
-    value: function toArray(array = [], offset = 0) {
+    value: function toArray() {
+      var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       array[offset] = this._x;
       array[offset + 1] = this._y;
       array[offset + 2] = this._z;
@@ -7591,8 +7691,8 @@ var Euler = /*#__PURE__*/function (_Symbol$iterator6) {
     value: function _onChangeCallback() {}
   }, {
     key: _Symbol$iterator6,
-    value: /*#__PURE__*/_regeneratorRuntime().mark(function value() {
-      return _regeneratorRuntime().wrap(function value$(_context7) {
+    value: /*#__PURE__*/regeneratorRuntime.mark(function value() {
+      return regeneratorRuntime.wrap(function value$(_context7) {
         while (1) {
           switch (_context7.prev = _context7.next) {
             case 0:
@@ -7798,14 +7898,10 @@ var Object3D = /*#__PURE__*/function (_EventDispatcher3) {
 
   _createClass(Object3D, [{
     key: "onBeforeRender",
-    value: function
-      /* renderer, scene, camera, geometry, material, group */
-    onBeforeRender() {}
+    value: function onBeforeRender() {}
   }, {
     key: "onAfterRender",
-    value: function
-      /* renderer, scene, camera, geometry, material, group */
-    onAfterRender() {}
+    value: function onAfterRender() {}
   }, {
     key: "applyMatrix4",
     value: function applyMatrix4(matrix) {
@@ -8093,9 +8189,7 @@ var Object3D = /*#__PURE__*/function (_EventDispatcher3) {
     }
   }, {
     key: "raycast",
-    value: function
-      /* raycaster, intersects */
-    raycast() {}
+    value: function raycast() {}
   }, {
     key: "traverse",
     value: function traverse(callback) {
@@ -8359,7 +8453,8 @@ var Object3D = /*#__PURE__*/function (_EventDispatcher3) {
     }
   }, {
     key: "copy",
-    value: function copy(source, recursive = true) {
+    value: function copy(source) {
+      var recursive = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
       this.name = source.name;
       this.up.copy(source.up);
       this.position.copy(source.position);
@@ -8417,7 +8512,11 @@ var _vbp = /*@__PURE__*/new Vector3();
 var _vcp = /*@__PURE__*/new Vector3();
 
 var Triangle = /*#__PURE__*/function () {
-  function Triangle(a = new Vector3(), b = new Vector3(), c = new Vector3()) {
+  function Triangle() {
+    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3();
+    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3();
+    var c = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Vector3();
+
     _classCallCheck(this, Triangle);
 
     this.a = a;
@@ -8758,19 +8857,13 @@ var Material = /*#__PURE__*/function (_EventDispatcher4) {
     }
   }, {
     key: "onBuild",
-    value: function
-      /* shaderobject, renderer */
-    onBuild() {}
+    value: function onBuild() {}
   }, {
     key: "onBeforeRender",
-    value: function
-      /* renderer, scene, camera, geometry, object, group */
-    onBeforeRender() {}
+    value: function onBeforeRender() {}
   }, {
     key: "onBeforeCompile",
-    value: function
-      /* shaderobject, renderer */
-    onBeforeCompile() {}
+    value: function onBeforeCompile() {}
   }, {
     key: "customProgramCacheKey",
     value: function customProgramCacheKey() {
@@ -9086,9 +9179,7 @@ var Material = /*#__PURE__*/function (_EventDispatcher4) {
 
 exports.Material = Material;
 
-Material.fromType = function
-  /*type*/
-() {
+Material.fromType = function () {
   // TODO: Behavior added in Materials.js
   return null;
 };
@@ -9378,7 +9469,8 @@ var BufferAttribute = /*#__PURE__*/function () {
     }
   }, {
     key: "set",
-    value: function set(value, offset = 0) {
+    value: function set(value) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       this.array.set(value, offset);
       return this;
     }
@@ -9497,7 +9589,7 @@ var Int8BufferAttribute = /*#__PURE__*/function (_BufferAttribute) {
     return _super11.call(this, new Int8Array(array), itemSize, normalized);
   }
 
-  return _createClass(Int8BufferAttribute);
+  return Int8BufferAttribute;
 }(BufferAttribute);
 
 exports.Int8BufferAttribute = Int8BufferAttribute;
@@ -9513,7 +9605,7 @@ var Uint8BufferAttribute = /*#__PURE__*/function (_BufferAttribute2) {
     return _super12.call(this, new Uint8Array(array), itemSize, normalized);
   }
 
-  return _createClass(Uint8BufferAttribute);
+  return Uint8BufferAttribute;
 }(BufferAttribute);
 
 exports.Uint8BufferAttribute = Uint8BufferAttribute;
@@ -9529,7 +9621,7 @@ var Uint8ClampedBufferAttribute = /*#__PURE__*/function (_BufferAttribute3) {
     return _super13.call(this, new Uint8ClampedArray(array), itemSize, normalized);
   }
 
-  return _createClass(Uint8ClampedBufferAttribute);
+  return Uint8ClampedBufferAttribute;
 }(BufferAttribute);
 
 exports.Uint8ClampedBufferAttribute = Uint8ClampedBufferAttribute;
@@ -9545,7 +9637,7 @@ var Int16BufferAttribute = /*#__PURE__*/function (_BufferAttribute4) {
     return _super14.call(this, new Int16Array(array), itemSize, normalized);
   }
 
-  return _createClass(Int16BufferAttribute);
+  return Int16BufferAttribute;
 }(BufferAttribute);
 
 exports.Int16BufferAttribute = Int16BufferAttribute;
@@ -9561,7 +9653,7 @@ var Uint16BufferAttribute = /*#__PURE__*/function (_BufferAttribute5) {
     return _super15.call(this, new Uint16Array(array), itemSize, normalized);
   }
 
-  return _createClass(Uint16BufferAttribute);
+  return Uint16BufferAttribute;
 }(BufferAttribute);
 
 exports.Uint16BufferAttribute = Uint16BufferAttribute;
@@ -9577,7 +9669,7 @@ var Int32BufferAttribute = /*#__PURE__*/function (_BufferAttribute6) {
     return _super16.call(this, new Int32Array(array), itemSize, normalized);
   }
 
-  return _createClass(Int32BufferAttribute);
+  return Int32BufferAttribute;
 }(BufferAttribute);
 
 exports.Int32BufferAttribute = Int32BufferAttribute;
@@ -9593,7 +9685,7 @@ var Uint32BufferAttribute = /*#__PURE__*/function (_BufferAttribute7) {
     return _super17.call(this, new Uint32Array(array), itemSize, normalized);
   }
 
-  return _createClass(Uint32BufferAttribute);
+  return Uint32BufferAttribute;
 }(BufferAttribute);
 
 exports.Uint32BufferAttribute = Uint32BufferAttribute;
@@ -9613,7 +9705,7 @@ var Float16BufferAttribute = /*#__PURE__*/function (_BufferAttribute8) {
     return _this12;
   }
 
-  return _createClass(Float16BufferAttribute);
+  return Float16BufferAttribute;
 }(BufferAttribute);
 
 exports.Float16BufferAttribute = Float16BufferAttribute;
@@ -9629,7 +9721,7 @@ var Float32BufferAttribute = /*#__PURE__*/function (_BufferAttribute9) {
     return _super19.call(this, new Float32Array(array), itemSize, normalized);
   }
 
-  return _createClass(Float32BufferAttribute);
+  return Float32BufferAttribute;
 }(BufferAttribute);
 
 exports.Float32BufferAttribute = Float32BufferAttribute;
@@ -9645,7 +9737,7 @@ var Float64BufferAttribute = /*#__PURE__*/function (_BufferAttribute10) {
     return _super20.call(this, new Float64Array(array), itemSize, normalized);
   }
 
-  return _createClass(Float64BufferAttribute);
+  return Float64BufferAttribute;
 }(BufferAttribute);
 
 exports.Float64BufferAttribute = Float64BufferAttribute;
@@ -9736,7 +9828,8 @@ var BufferGeometry = /*#__PURE__*/function (_EventDispatcher5) {
     }
   }, {
     key: "addGroup",
-    value: function addGroup(start, count, materialIndex = 0) {
+    value: function addGroup(start, count) {
+      var materialIndex = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
       this.groups.push({
         start: start,
         count: count,
@@ -10523,8 +10616,11 @@ var Mesh = /*#__PURE__*/function (_Object3D) {
 
   var _super22 = _createSuper(Mesh);
 
-  function Mesh(geometry = new BufferGeometry(), material = new MeshBasicMaterial()) {
+  function Mesh() {
     var _this14;
+
+    var geometry = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new BufferGeometry();
+    var material = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new MeshBasicMaterial();
 
     _classCallCheck(this, Mesh);
 
@@ -10836,8 +10932,15 @@ var BoxGeometry = /*#__PURE__*/function (_BufferGeometry) {
 
   var _super23 = _createSuper(BoxGeometry);
 
-  function BoxGeometry(width = 1, height = 1, depth = 1, widthSegments = 1, heightSegments = 1, depthSegments = 1) {
+  function BoxGeometry() {
     var _this15;
+
+    var width = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var height = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var depth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var widthSegments = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+    var heightSegments = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+    var depthSegments = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 1;
 
     _classCallCheck(this, BoxGeometry);
 
@@ -11231,8 +11334,13 @@ var PerspectiveCamera = /*#__PURE__*/function (_Camera) {
 
   var _super26 = _createSuper(PerspectiveCamera);
 
-  function PerspectiveCamera(fov = 50, aspect = 1, near = 0.1, far = 2000) {
+  function PerspectiveCamera() {
     var _this18;
+
+    var fov = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 50;
+    var aspect = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var near = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0.1;
+    var far = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 2000;
 
     _classCallCheck(this, PerspectiveCamera);
 
@@ -11583,8 +11691,10 @@ var WebGLCubeRenderTarget = /*#__PURE__*/function (_WebGLRenderTarget4) {
 
   var _super29 = _createSuper(WebGLCubeRenderTarget);
 
-  function WebGLCubeRenderTarget(size, options = {}) {
+  function WebGLCubeRenderTarget(size) {
     var _this21;
+
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
     _classCallCheck(this, WebGLCubeRenderTarget);
 
@@ -11677,7 +11787,10 @@ var _vector2 = /*@__PURE__*/new Vector3();
 var _normalMatrix = /*@__PURE__*/new Matrix3();
 
 var Plane = /*#__PURE__*/function () {
-  function Plane(normal = new Vector3(1, 0, 0), constant = 0) {
+  function Plane() {
+    var normal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3(1, 0, 0);
+    var constant = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
     _classCallCheck(this, Plane);
 
     this.isPlane = true; // normal is assumed to be normalized
@@ -11839,7 +11952,14 @@ var _sphere$2 = /*@__PURE__*/new Sphere();
 var _vector$7 = /*@__PURE__*/new Vector3();
 
 var Frustum = /*#__PURE__*/function () {
-  function Frustum(p0 = new Plane(), p1 = new Plane(), p2 = new Plane(), p3 = new Plane(), p4 = new Plane(), p5 = new Plane()) {
+  function Frustum() {
+    var p0 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Plane();
+    var p1 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Plane();
+    var p2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Plane();
+    var p3 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : new Plane();
+    var p4 = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : new Plane();
+    var p5 = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : new Plane();
+
     _classCallCheck(this, Frustum);
 
     this.planes = [p0, p1, p2, p3, p4, p5];
@@ -12133,8 +12253,13 @@ var PlaneGeometry = /*#__PURE__*/function (_BufferGeometry2) {
 
   var _super30 = _createSuper(PlaneGeometry);
 
-  function PlaneGeometry(width = 1, height = 1, widthSegments = 1, heightSegments = 1) {
+  function PlaneGeometry() {
     var _this22;
+
+    var width = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var height = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var widthSegments = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var heightSegments = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
 
     _classCallCheck(this, PlaneGeometry);
 
@@ -13165,7 +13290,8 @@ function WebGLBackground(renderer, cubemaps, state, objects, alpha, premultiplie
     getClearColor: function getClearColor() {
       return clearColor;
     },
-    setClearColor: function setClearColor(color, alpha = 1) {
+    setClearColor: function setClearColor(color) {
+      var alpha = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
       clearColor.set(color);
       clearAlpha = alpha;
       setClear(clearColor, clearAlpha);
@@ -13893,8 +14019,15 @@ var OrthographicCamera = /*#__PURE__*/function (_Camera2) {
 
   var _super31 = _createSuper(OrthographicCamera);
 
-  function OrthographicCamera(left = -1, right = 1, top = 1, bottom = -1, near = 0.1, far = 2000) {
+  function OrthographicCamera() {
     var _this23;
+
+    var left = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : -1;
+    var right = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var top = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var bottom = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : -1;
+    var near = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0.1;
+    var far = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 2000;
 
     _classCallCheck(this, OrthographicCamera);
 
@@ -14072,7 +14205,10 @@ var PMREMGenerator = /*#__PURE__*/function () {
 
   _createClass(PMREMGenerator, [{
     key: "fromScene",
-    value: function fromScene(scene, sigma = 0, near = 0.1, far = 100) {
+    value: function fromScene(scene) {
+      var sigma = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      var near = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0.1;
+      var far = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 100;
       _oldTarget = this._renderer.getRenderTarget();
 
       this._setSize(256);
@@ -14101,7 +14237,8 @@ var PMREMGenerator = /*#__PURE__*/function () {
 
   }, {
     key: "fromEquirectangular",
-    value: function fromEquirectangular(equirectangular, renderTarget = null) {
+    value: function fromEquirectangular(equirectangular) {
+      var renderTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
       return this._fromTexture(equirectangular, renderTarget);
     }
     /**
@@ -14112,7 +14249,8 @@ var PMREMGenerator = /*#__PURE__*/function () {
 
   }, {
     key: "fromCubemap",
-    value: function fromCubemap(cubemap, renderTarget = null) {
+    value: function fromCubemap(cubemap) {
+      var renderTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
       return this._fromTexture(cubemap, renderTarget);
     }
     /**
@@ -15932,16 +16070,16 @@ function getPureArraySetter(type) {
 } // --- Uniform Classes ---
 
 
-var SingleUniform = /*#__PURE__*/_createClass(function SingleUniform(id, activeInfo, addr) {
+var SingleUniform = function SingleUniform(id, activeInfo, addr) {
   _classCallCheck(this, SingleUniform);
 
   this.id = id;
   this.addr = addr;
   this.cache = [];
   this.setValue = getSingularSetter(activeInfo.type); // this.path = activeInfo.name; // DEBUG
-});
+};
 
-var PureArrayUniform = /*#__PURE__*/_createClass(function PureArrayUniform(id, activeInfo, addr) {
+var PureArrayUniform = function PureArrayUniform(id, activeInfo, addr) {
   _classCallCheck(this, PureArrayUniform);
 
   this.id = id;
@@ -15949,7 +16087,7 @@ var PureArrayUniform = /*#__PURE__*/_createClass(function PureArrayUniform(id, a
   this.cache = [];
   this.size = activeInfo.size;
   this.setValue = getPureArraySetter(activeInfo.type); // this.path = activeInfo.name; // DEBUG
-});
+};
 
 var StructuredUniform = /*#__PURE__*/function () {
   function StructuredUniform(id) {
@@ -16612,13 +16750,13 @@ var WebGLShaderCache = /*#__PURE__*/function () {
   return WebGLShaderCache;
 }();
 
-var WebGLShaderStage = /*#__PURE__*/_createClass(function WebGLShaderStage(code) {
+var WebGLShaderStage = function WebGLShaderStage(code) {
   _classCallCheck(this, WebGLShaderStage);
 
   this.id = _id++;
   this.code = code;
   this.usedTimes = 0;
-});
+};
 
 function WebGLPrograms(renderer, cubemaps, cubeuvmaps, extensions, capabilities, bindingStates, clipping) {
   var _programLayers = new Layers();
@@ -17651,7 +17789,8 @@ function WebGLRenderState(extensions, capabilities) {
 function WebGLRenderStates(extensions, capabilities) {
   var renderStates = new WeakMap();
 
-  function get(scene, renderCallDepth = 0) {
+  function get(scene) {
+    var renderCallDepth = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
     var renderState;
 
     if (renderStates.has(scene) === false) {
@@ -18931,7 +19070,8 @@ function WebGLTextures(_gl, extensions, state, properties, capabilities, utils, 
     _gl.generateMipmap(target);
   }
 
-  function getInternalFormat(internalFormatName, glFormat, glType, encoding, isVideoTexture = false) {
+  function getInternalFormat(internalFormatName, glFormat, glType, encoding) {
+    var isVideoTexture = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
     if (isWebGL2 === false) return glFormat;
 
     if (internalFormatName !== null) {
@@ -20148,7 +20288,8 @@ function WebGLTextures(_gl, extensions, state, properties, capabilities, utils, 
 function WebGLUtils(gl, extensions, capabilities) {
   var isWebGL2 = capabilities.isWebGL2;
 
-  function convert(p, encoding = null) {
+  function convert(p) {
+    var encoding = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
     var extension;
     if (p === UnsignedByteType) return 5121;
     if (p === UnsignedShort4444Type) return 32819;
@@ -20325,8 +20466,10 @@ var ArrayCamera = /*#__PURE__*/function (_PerspectiveCamera) {
 
   var _super34 = _createSuper(ArrayCamera);
 
-  function ArrayCamera(array = []) {
+  function ArrayCamera() {
     var _this26;
+
+    var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
     _classCallCheck(this, ArrayCamera);
 
@@ -20336,7 +20479,7 @@ var ArrayCamera = /*#__PURE__*/function (_PerspectiveCamera) {
     return _this26;
   }
 
-  return _createClass(ArrayCamera);
+  return ArrayCamera;
 }(PerspectiveCamera);
 
 exports.ArrayCamera = ArrayCamera;
@@ -20357,7 +20500,7 @@ var Group = /*#__PURE__*/function (_Object3D4) {
     return _this27;
   }
 
-  return _createClass(Group);
+  return Group;
 }(Object3D);
 
 exports.Group = Group;
@@ -20632,7 +20775,7 @@ var DepthTexture = /*#__PURE__*/function (_Texture4) {
     return _this28;
   }
 
-  return _createClass(DepthTexture);
+  return DepthTexture;
 }(Texture);
 
 exports.DepthTexture = DepthTexture;
@@ -20802,9 +20945,9 @@ var WebXRManager = /*#__PURE__*/function (_EventDispatcher6) {
     };
 
     _this29.setSession = /*#__PURE__*/function () {
-      var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(value) {
+      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(value) {
         var layerInit, depthFormat, depthType, glDepthFormat, projectionlayerInit, renderTargetProperties;
-        return _regeneratorRuntime().wrap(function _callee$(_context8) {
+        return regeneratorRuntime.wrap(function _callee$(_context8) {
           while (1) {
             switch (_context8.prev = _context8.next) {
               case 0:
@@ -21172,7 +21315,7 @@ var WebXRManager = /*#__PURE__*/function (_EventDispatcher6) {
     return _this29;
   }
 
-  return _createClass(WebXRManager);
+  return WebXRManager;
 }(EventDispatcher);
 
 function WebGLMaterials(renderer, properties) {
@@ -21630,7 +21773,8 @@ function createCanvasElement() {
   return canvas;
 }
 
-function WebGLRenderer(parameters = {}) {
+function WebGLRenderer() {
+  var parameters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   this.isWebGLRenderer = true;
 
   var _canvas = parameters.canvas !== undefined ? parameters.canvas : createCanvasElement(),
@@ -21997,7 +22141,10 @@ function WebGLRenderer(parameters = {}) {
     background.setClearAlpha.apply(background, arguments);
   };
 
-  this.clear = function (color = true, depth = true, stencil = true) {
+  this.clear = function () {
+    var color = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+    var depth = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    var stencil = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
     var bits = 0;
     if (color) bits |= 16384;
     if (depth) bits |= 256;
@@ -22054,9 +22201,7 @@ function WebGLRenderer(parameters = {}) {
     _isContextLost = true;
   }
 
-  function
-    /* event */
-  onContextRestore() {
+  function onContextRestore() {
     console.log('THREE.WebGLRenderer: Context Restored.');
     _isContextLost = false;
     var infoAutoReset = info.autoReset;
@@ -22857,7 +23002,9 @@ function WebGLRenderer(parameters = {}) {
     renderTargetProperties.__useDefaultFramebuffer = defaultFramebuffer === undefined;
   };
 
-  this.setRenderTarget = function (renderTarget, activeCubeFace = 0, activeMipmapLevel = 0) {
+  this.setRenderTarget = function (renderTarget) {
+    var activeCubeFace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var activeMipmapLevel = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
     _currentRenderTarget = renderTarget;
     _currentActiveCubeFace = activeCubeFace;
     _currentActiveMipmapLevel = activeMipmapLevel;
@@ -22985,7 +23132,8 @@ function WebGLRenderer(parameters = {}) {
     }
   };
 
-  this.copyFramebufferToTexture = function (position, texture, level = 0) {
+  this.copyFramebufferToTexture = function (position, texture) {
+    var level = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
     var levelScale = Math.pow(2, -level);
     var width = Math.floor(texture.image.width * levelScale);
     var height = Math.floor(texture.image.height * levelScale);
@@ -22996,7 +23144,8 @@ function WebGLRenderer(parameters = {}) {
     state.unbindTexture();
   };
 
-  this.copyTextureToTexture = function (position, srcTexture, dstTexture, level = 0) {
+  this.copyTextureToTexture = function (position, srcTexture, dstTexture) {
+    var level = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
     var width = srcTexture.image.width;
     var height = srcTexture.image.height;
     var glFormat = utils.convert(dstTexture.format);
@@ -23025,7 +23174,9 @@ function WebGLRenderer(parameters = {}) {
     state.unbindTexture();
   };
 
-  this.copyTextureToTexture3D = function (sourceBox, position, srcTexture, dstTexture, level = 0) {
+  this.copyTextureToTexture3D = function (sourceBox, position, srcTexture, dstTexture) {
+    var level = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
+
     if (_this.isWebGL1Renderer) {
       console.warn('THREE.WebGLRenderer.copyTextureToTexture3D: can only be used with WebGL2.');
       return;
@@ -23135,14 +23286,16 @@ var WebGL1Renderer = /*#__PURE__*/function (_WebGLRenderer) {
     return _super38.apply(this, arguments);
   }
 
-  return _createClass(WebGL1Renderer);
+  return WebGL1Renderer;
 }(WebGLRenderer);
 
 exports.WebGL1Renderer = WebGL1Renderer;
 WebGL1Renderer.prototype.isWebGL1Renderer = true;
 
 var FogExp2 = /*#__PURE__*/function () {
-  function FogExp2(color, density = 0.00025) {
+  function FogExp2(color) {
+    var density = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.00025;
+
     _classCallCheck(this, FogExp2);
 
     this.isFogExp2 = true;
@@ -23158,9 +23311,7 @@ var FogExp2 = /*#__PURE__*/function () {
     }
   }, {
     key: "toJSON",
-    value: function
-      /* meta */
-    toJSON() {
+    value: function toJSON() {
       return {
         type: 'FogExp2',
         color: this.color.getHex(),
@@ -23175,7 +23326,10 @@ var FogExp2 = /*#__PURE__*/function () {
 exports.FogExp2 = FogExp2;
 
 var Fog = /*#__PURE__*/function () {
-  function Fog(color, near = 1, far = 1000) {
+  function Fog(color) {
+    var near = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var far = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1000;
+
     _classCallCheck(this, Fog);
 
     this.isFog = true;
@@ -23192,9 +23346,7 @@ var Fog = /*#__PURE__*/function () {
     }
   }, {
     key: "toJSON",
-    value: function
-      /* meta */
-    toJSON() {
+    value: function toJSON() {
       return {
         type: 'Fog',
         color: this.color.getHex(),
@@ -23319,7 +23471,8 @@ var InterleavedBuffer = /*#__PURE__*/function () {
     }
   }, {
     key: "set",
-    value: function set(value, offset = 0) {
+    value: function set(value) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       this.array.set(value, offset);
       return this;
     }
@@ -23383,7 +23536,9 @@ exports.InterleavedBuffer = InterleavedBuffer;
 var _vector$6 = /*@__PURE__*/new Vector3();
 
 var InterleavedBufferAttribute = /*#__PURE__*/function () {
-  function InterleavedBufferAttribute(interleavedBuffer, itemSize, offset, normalized = false) {
+  function InterleavedBufferAttribute(interleavedBuffer, itemSize, offset) {
+    var normalized = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+
     _classCallCheck(this, InterleavedBufferAttribute);
 
     this.isInterleavedBufferAttribute = true;
@@ -23845,7 +24000,8 @@ var LOD = /*#__PURE__*/function (_Object3D7) {
     }
   }, {
     key: "addLevel",
-    value: function addLevel(object, distance = 0) {
+    value: function addLevel(object) {
+      var distance = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       distance = Math.abs(distance);
       var levels = this.levels;
       var l;
@@ -24098,7 +24254,7 @@ var Bone = /*#__PURE__*/function (_Object3D8) {
     return _this35;
   }
 
-  return _createClass(Bone);
+  return Bone;
 }(Object3D);
 
 exports.Bone = Bone;
@@ -24108,8 +24264,21 @@ var DataTexture = /*#__PURE__*/function (_Texture5) {
 
   var _super45 = _createSuper(DataTexture);
 
-  function DataTexture(data = null, width = 1, height = 1, format, type, mapping, wrapS, wrapT, magFilter = NearestFilter, minFilter = NearestFilter, anisotropy, encoding) {
+  function DataTexture() {
     var _this36;
+
+    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var width = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var height = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var format = arguments.length > 3 ? arguments[3] : undefined;
+    var type = arguments.length > 4 ? arguments[4] : undefined;
+    var mapping = arguments.length > 5 ? arguments[5] : undefined;
+    var wrapS = arguments.length > 6 ? arguments[6] : undefined;
+    var wrapT = arguments.length > 7 ? arguments[7] : undefined;
+    var magFilter = arguments.length > 8 && arguments[8] !== undefined ? arguments[8] : NearestFilter;
+    var minFilter = arguments.length > 9 && arguments[9] !== undefined ? arguments[9] : NearestFilter;
+    var anisotropy = arguments.length > 10 ? arguments[10] : undefined;
+    var encoding = arguments.length > 11 ? arguments[11] : undefined;
 
     _classCallCheck(this, DataTexture);
 
@@ -24126,7 +24295,7 @@ var DataTexture = /*#__PURE__*/function (_Texture5) {
     return _this36;
   }
 
-  return _createClass(DataTexture);
+  return DataTexture;
 }(Texture);
 
 exports.DataTexture = DataTexture;
@@ -24136,7 +24305,10 @@ var _offsetMatrix = /*@__PURE__*/new Matrix4();
 var _identityMatrix = /*@__PURE__*/new Matrix4();
 
 var Skeleton = /*#__PURE__*/function () {
-  function Skeleton(bones = [], boneInverses = []) {
+  function Skeleton() {
+    var bones = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var boneInverses = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
     _classCallCheck(this, Skeleton);
 
     this.uuid = generateUUID();
@@ -24343,8 +24515,10 @@ var InstancedBufferAttribute = /*#__PURE__*/function (_BufferAttribute11) {
 
   var _super46 = _createSuper(InstancedBufferAttribute);
 
-  function InstancedBufferAttribute(array, itemSize, normalized, meshPerAttribute = 1) {
+  function InstancedBufferAttribute(array, itemSize, normalized) {
     var _this37;
+
+    var meshPerAttribute = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
 
     _classCallCheck(this, InstancedBufferAttribute);
 
@@ -24551,8 +24725,11 @@ var Line = /*#__PURE__*/function (_Object3D9) {
 
   var _super49 = _createSuper(Line);
 
-  function Line(geometry = new BufferGeometry(), material = new LineBasicMaterial()) {
+  function Line() {
     var _this40;
+
+    var geometry = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new BufferGeometry();
+    var material = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new LineBasicMaterial();
 
     _classCallCheck(this, Line);
 
@@ -24788,7 +24965,7 @@ var LineLoop = /*#__PURE__*/function (_Line2) {
     return _this42;
   }
 
-  return _createClass(LineLoop);
+  return LineLoop;
 }(Line);
 
 exports.LineLoop = LineLoop;
@@ -24851,8 +25028,11 @@ var Points = /*#__PURE__*/function (_Object3D10) {
 
   var _super53 = _createSuper(Points);
 
-  function Points(geometry = new BufferGeometry(), material = new PointsMaterial()) {
+  function Points() {
     var _this44;
+
+    var geometry = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new BufferGeometry();
+    var material = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new PointsMaterial();
 
     _classCallCheck(this, Points);
 
@@ -25052,7 +25232,7 @@ var FramebufferTexture = /*#__PURE__*/function (_Texture7) {
     return _this46;
   }
 
-  return _createClass(FramebufferTexture);
+  return FramebufferTexture;
 }(Texture);
 
 exports.FramebufferTexture = FramebufferTexture;
@@ -25083,7 +25263,7 @@ var CompressedTexture = /*#__PURE__*/function (_Texture8) {
     return _this47;
   }
 
-  return _createClass(CompressedTexture);
+  return CompressedTexture;
 }(Texture);
 
 exports.CompressedTexture = CompressedTexture;
@@ -25104,7 +25284,7 @@ var CanvasTexture = /*#__PURE__*/function (_Texture9) {
     return _this48;
   }
 
-  return _createClass(CanvasTexture);
+  return CanvasTexture;
 }(Texture);
 /**
  * Extensible curve object.
@@ -25151,9 +25331,7 @@ var Curve = /*#__PURE__*/function () {
 
   _createClass(Curve, [{
     key: "getPoint",
-    value: function
-      /* t, optionalTarget */
-    getPoint() {
+    value: function getPoint() {
       console.warn('THREE.Curve: .getPoint() not implemented.');
       return null;
     } // Get point at relative position in curve according to arc length
@@ -25168,7 +25346,8 @@ var Curve = /*#__PURE__*/function () {
 
   }, {
     key: "getPoints",
-    value: function getPoints(divisions = 5) {
+    value: function getPoints() {
+      var divisions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 5;
       var points = [];
 
       for (var d = 0; d <= divisions; d++) {
@@ -25180,7 +25359,8 @@ var Curve = /*#__PURE__*/function () {
 
   }, {
     key: "getSpacedPoints",
-    value: function getSpacedPoints(divisions = 5) {
+    value: function getSpacedPoints() {
+      var divisions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 5;
       var points = [];
 
       for (var d = 0; d <= divisions; d++) {
@@ -25199,7 +25379,9 @@ var Curve = /*#__PURE__*/function () {
 
   }, {
     key: "getLengths",
-    value: function getLengths(divisions = this.arcLengthDivisions) {
+    value: function getLengths() {
+      var divisions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.arcLengthDivisions;
+
       if (this.cacheArcLengths && this.cacheArcLengths.length === divisions + 1 && !this.needsUpdate) {
         return this.cacheArcLengths;
       }
@@ -25428,8 +25610,17 @@ var EllipseCurve = /*#__PURE__*/function (_Curve) {
 
   var _super58 = _createSuper(EllipseCurve);
 
-  function EllipseCurve(aX = 0, aY = 0, xRadius = 1, yRadius = 1, aStartAngle = 0, aEndAngle = Math.PI * 2, aClockwise = false, aRotation = 0) {
+  function EllipseCurve() {
     var _this49;
+
+    var aX = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    var aY = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var xRadius = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var yRadius = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+    var aStartAngle = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
+    var aEndAngle = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : Math.PI * 2;
+    var aClockwise = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
+    var aRotation = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : 0;
 
     _classCallCheck(this, EllipseCurve);
 
@@ -25563,7 +25754,7 @@ var ArcCurve = /*#__PURE__*/function (_EllipseCurve) {
     return _this50;
   }
 
-  return _createClass(ArcCurve);
+  return ArcCurve;
 }(EllipseCurve);
 /**
  * Centripetal CatmullRom Curve - which is useful for avoiding
@@ -25640,8 +25831,13 @@ var CatmullRomCurve3 = /*#__PURE__*/function (_Curve2) {
 
   var _super60 = _createSuper(CatmullRomCurve3);
 
-  function CatmullRomCurve3(points = [], closed = false, curveType = 'centripetal', tension = 0.5) {
+  function CatmullRomCurve3() {
     var _this51;
+
+    var points = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var closed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var curveType = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'centripetal';
+    var tension = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0.5;
 
     _classCallCheck(this, CatmullRomCurve3);
 
@@ -25657,7 +25853,8 @@ var CatmullRomCurve3 = /*#__PURE__*/function (_Curve2) {
 
   _createClass(CatmullRomCurve3, [{
     key: "getPoint",
-    value: function getPoint(t, optionalTarget = new Vector3()) {
+    value: function getPoint(t) {
+      var optionalTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3();
       var point = optionalTarget;
       var points = this.points;
       var l = points.length;
@@ -25832,8 +26029,13 @@ var CubicBezierCurve = /*#__PURE__*/function (_Curve3) {
 
   var _super61 = _createSuper(CubicBezierCurve);
 
-  function CubicBezierCurve(v0 = new Vector2(), v1 = new Vector2(), v2 = new Vector2(), v3 = new Vector2()) {
+  function CubicBezierCurve() {
     var _this52;
+
+    var v0 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector2();
+    var v1 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector2();
+    var v2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Vector2();
+    var v3 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : new Vector2();
 
     _classCallCheck(this, CubicBezierCurve);
 
@@ -25849,7 +26051,8 @@ var CubicBezierCurve = /*#__PURE__*/function (_Curve3) {
 
   _createClass(CubicBezierCurve, [{
     key: "getPoint",
-    value: function getPoint(t, optionalTarget = new Vector2()) {
+    value: function getPoint(t) {
+      var optionalTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector2();
       var point = optionalTarget;
       var v0 = this.v0,
           v1 = this.v1,
@@ -25903,8 +26106,13 @@ var CubicBezierCurve3 = /*#__PURE__*/function (_Curve4) {
 
   var _super62 = _createSuper(CubicBezierCurve3);
 
-  function CubicBezierCurve3(v0 = new Vector3(), v1 = new Vector3(), v2 = new Vector3(), v3 = new Vector3()) {
+  function CubicBezierCurve3() {
     var _this53;
+
+    var v0 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3();
+    var v1 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3();
+    var v2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Vector3();
+    var v3 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : new Vector3();
 
     _classCallCheck(this, CubicBezierCurve3);
 
@@ -25920,7 +26128,8 @@ var CubicBezierCurve3 = /*#__PURE__*/function (_Curve4) {
 
   _createClass(CubicBezierCurve3, [{
     key: "getPoint",
-    value: function getPoint(t, optionalTarget = new Vector3()) {
+    value: function getPoint(t) {
+      var optionalTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3();
       var point = optionalTarget;
       var v0 = this.v0,
           v1 = this.v1,
@@ -25974,8 +26183,11 @@ var LineCurve = /*#__PURE__*/function (_Curve5) {
 
   var _super63 = _createSuper(LineCurve);
 
-  function LineCurve(v1 = new Vector2(), v2 = new Vector2()) {
+  function LineCurve() {
     var _this54;
+
+    var v1 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector2();
+    var v2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector2();
 
     _classCallCheck(this, LineCurve);
 
@@ -25989,7 +26201,8 @@ var LineCurve = /*#__PURE__*/function (_Curve5) {
 
   _createClass(LineCurve, [{
     key: "getPoint",
-    value: function getPoint(t, optionalTarget = new Vector2()) {
+    value: function getPoint(t) {
+      var optionalTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector2();
       var point = optionalTarget;
 
       if (t === 1) {
@@ -26053,8 +26266,11 @@ var LineCurve3 = /*#__PURE__*/function (_Curve6) {
 
   var _super64 = _createSuper(LineCurve3);
 
-  function LineCurve3(v1 = new Vector3(), v2 = new Vector3()) {
+  function LineCurve3() {
     var _this55;
+
+    var v1 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3();
+    var v2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3();
 
     _classCallCheck(this, LineCurve3);
 
@@ -26068,7 +26284,8 @@ var LineCurve3 = /*#__PURE__*/function (_Curve6) {
 
   _createClass(LineCurve3, [{
     key: "getPoint",
-    value: function getPoint(t, optionalTarget = new Vector3()) {
+    value: function getPoint(t) {
+      var optionalTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3();
       var point = optionalTarget;
 
       if (t === 1) {
@@ -26125,8 +26342,12 @@ var QuadraticBezierCurve = /*#__PURE__*/function (_Curve7) {
 
   var _super65 = _createSuper(QuadraticBezierCurve);
 
-  function QuadraticBezierCurve(v0 = new Vector2(), v1 = new Vector2(), v2 = new Vector2()) {
+  function QuadraticBezierCurve() {
     var _this56;
+
+    var v0 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector2();
+    var v1 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector2();
+    var v2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Vector2();
 
     _classCallCheck(this, QuadraticBezierCurve);
 
@@ -26141,7 +26362,8 @@ var QuadraticBezierCurve = /*#__PURE__*/function (_Curve7) {
 
   _createClass(QuadraticBezierCurve, [{
     key: "getPoint",
-    value: function getPoint(t, optionalTarget = new Vector2()) {
+    value: function getPoint(t) {
+      var optionalTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector2();
       var point = optionalTarget;
       var v0 = this.v0,
           v1 = this.v1,
@@ -26191,8 +26413,12 @@ var QuadraticBezierCurve3 = /*#__PURE__*/function (_Curve8) {
 
   var _super66 = _createSuper(QuadraticBezierCurve3);
 
-  function QuadraticBezierCurve3(v0 = new Vector3(), v1 = new Vector3(), v2 = new Vector3()) {
+  function QuadraticBezierCurve3() {
     var _this57;
+
+    var v0 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3();
+    var v1 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3();
+    var v2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Vector3();
 
     _classCallCheck(this, QuadraticBezierCurve3);
 
@@ -26207,7 +26433,8 @@ var QuadraticBezierCurve3 = /*#__PURE__*/function (_Curve8) {
 
   _createClass(QuadraticBezierCurve3, [{
     key: "getPoint",
-    value: function getPoint(t, optionalTarget = new Vector3()) {
+    value: function getPoint(t) {
+      var optionalTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3();
       var point = optionalTarget;
       var v0 = this.v0,
           v1 = this.v1,
@@ -26257,8 +26484,10 @@ var SplineCurve = /*#__PURE__*/function (_Curve9) {
 
   var _super67 = _createSuper(SplineCurve);
 
-  function SplineCurve(points = []) {
+  function SplineCurve() {
     var _this58;
+
+    var points = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
     _classCallCheck(this, SplineCurve);
 
@@ -26271,7 +26500,8 @@ var SplineCurve = /*#__PURE__*/function (_Curve9) {
 
   _createClass(SplineCurve, [{
     key: "getPoint",
-    value: function getPoint(t, optionalTarget = new Vector2()) {
+    value: function getPoint(t) {
+      var optionalTarget = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector2();
       var point = optionalTarget;
       var points = this.points;
       var p = (points.length - 1) * t;
@@ -26454,7 +26684,8 @@ var CurvePath = /*#__PURE__*/function (_Curve10) {
     }
   }, {
     key: "getSpacedPoints",
-    value: function getSpacedPoints(divisions = 40) {
+    value: function getSpacedPoints() {
+      var divisions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 40;
       var points = [];
 
       for (var _i196 = 0; _i196 <= divisions; _i196++) {
@@ -26469,7 +26700,8 @@ var CurvePath = /*#__PURE__*/function (_Curve10) {
     }
   }, {
     key: "getPoints",
-    value: function getPoints(divisions = 12) {
+    value: function getPoints() {
+      var divisions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
       var points = [];
       var last;
 
@@ -26696,8 +26928,13 @@ var LatheGeometry = /*#__PURE__*/function (_BufferGeometry3) {
 
   var _super70 = _createSuper(LatheGeometry);
 
-  function LatheGeometry(points = [new Vector2(0, 0.5), new Vector2(0.5, 0), new Vector2(0, -0.5)], segments = 12, phiStart = 0, phiLength = Math.PI * 2) {
+  function LatheGeometry() {
     var _this61;
+
+    var points = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [new Vector2(0, 0.5), new Vector2(0.5, 0), new Vector2(0, -0.5)];
+    var segments = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 12;
+    var phiStart = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    var phiLength = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : Math.PI * 2;
 
     _classCallCheck(this, LatheGeometry);
 
@@ -26831,8 +27068,13 @@ var CapsuleGeometry = /*#__PURE__*/function (_LatheGeometry) {
 
   var _super71 = _createSuper(CapsuleGeometry);
 
-  function CapsuleGeometry(radius = 1, length = 1, capSegments = 4, radialSegments = 8) {
+  function CapsuleGeometry() {
     var _this62;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var capSegments = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 4;
+    var radialSegments = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 8;
 
     _classCallCheck(this, CapsuleGeometry);
 
@@ -26867,8 +27109,13 @@ var CircleGeometry = /*#__PURE__*/function (_BufferGeometry4) {
 
   var _super72 = _createSuper(CircleGeometry);
 
-  function CircleGeometry(radius = 1, segments = 8, thetaStart = 0, thetaLength = Math.PI * 2) {
+  function CircleGeometry() {
     var _this63;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var segments = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 8;
+    var thetaStart = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    var thetaLength = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : Math.PI * 2;
 
     _classCallCheck(this, CircleGeometry);
 
@@ -26942,8 +27189,17 @@ var CylinderGeometry = /*#__PURE__*/function (_BufferGeometry5) {
 
   var _super73 = _createSuper(CylinderGeometry);
 
-  function CylinderGeometry(radiusTop = 1, radiusBottom = 1, height = 1, radialSegments = 8, heightSegments = 1, openEnded = false, thetaStart = 0, thetaLength = Math.PI * 2) {
+  function CylinderGeometry() {
     var _this64;
+
+    var radiusTop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var radiusBottom = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var height = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var radialSegments = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 8;
+    var heightSegments = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+    var openEnded = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : false;
+    var thetaStart = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : 0;
+    var thetaLength = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : Math.PI * 2;
 
     _classCallCheck(this, CylinderGeometry);
 
@@ -27137,8 +27393,16 @@ var ConeGeometry = /*#__PURE__*/function (_CylinderGeometry) {
 
   var _super74 = _createSuper(ConeGeometry);
 
-  function ConeGeometry(radius = 1, height = 1, radialSegments = 8, heightSegments = 1, openEnded = false, thetaStart = 0, thetaLength = Math.PI * 2) {
+  function ConeGeometry() {
     var _this65;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var height = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var radialSegments = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 8;
+    var heightSegments = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+    var openEnded = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+    var thetaStart = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0;
+    var thetaLength = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : Math.PI * 2;
 
     _classCallCheck(this, ConeGeometry);
 
@@ -27173,8 +27437,13 @@ var PolyhedronGeometry = /*#__PURE__*/function (_BufferGeometry6) {
 
   var _super75 = _createSuper(PolyhedronGeometry);
 
-  function PolyhedronGeometry(vertices = [], indices = [], radius = 1, detail = 0) {
+  function PolyhedronGeometry() {
     var _this66;
+
+    var vertices = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var indices = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    var radius = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var detail = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
 
     _classCallCheck(this, PolyhedronGeometry);
 
@@ -27387,8 +27656,11 @@ var DodecahedronGeometry = /*#__PURE__*/function (_PolyhedronGeometry) {
 
   var _super76 = _createSuper(DodecahedronGeometry);
 
-  function DodecahedronGeometry(radius = 1, detail = 0) {
+  function DodecahedronGeometry() {
     var _this67;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var detail = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
     _classCallCheck(this, DodecahedronGeometry);
 
@@ -27434,8 +27706,11 @@ var EdgesGeometry = /*#__PURE__*/function (_BufferGeometry7) {
 
   var _super77 = _createSuper(EdgesGeometry);
 
-  function EdgesGeometry(geometry = null, thresholdAngle = 1) {
+  function EdgesGeometry() {
     var _this68;
+
+    var geometry = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var thresholdAngle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
     _classCallCheck(this, EdgesGeometry);
 
@@ -27541,7 +27816,7 @@ var EdgesGeometry = /*#__PURE__*/function (_BufferGeometry7) {
     return _this68;
   }
 
-  return _createClass(EdgesGeometry);
+  return EdgesGeometry;
 }(BufferGeometry);
 
 exports.EdgesGeometry = EdgesGeometry;
@@ -27638,7 +27913,8 @@ var Shape = /*#__PURE__*/function (_Path) {
 
 exports.Shape = Shape;
 var Earcut = {
-  triangulate: function triangulate(data, holeIndices, dim = 2) {
+  triangulate: function triangulate(data, holeIndices) {
+    var dim = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
     var hasHoles = holeIndices && holeIndices.length;
     var outerLen = hasHoles ? holeIndices[0] * dim : data.length;
     var outerNode = linkedList(data, 0, outerLen, dim, true);
@@ -28077,9 +28353,7 @@ function pointInTriangle(ax, ay, bx, by, cx, cy, px, py) {
 
 
 function isValidDiagonal(a, b) {
-  return a.next.i !== b.i && a.prev.i !== b.i && !intersectsPolygon(a, b) && ( // doesn't intersect other edges
-  locallyInside(a, b) && locallyInside(b, a) && middleInside(a, b) && ( // locally visible
-  area(a.prev, a, b.prev) || area(a, b.prev, b)) || // does not create opposite-facing sectors
+  return a.next.i !== b.i && a.prev.i !== b.i && !intersectsPolygon(a, b) && (locallyInside(a, b) && locallyInside(b, a) && middleInside(a, b) && (area(a.prev, a, b.prev) || area(a, b.prev, b)) || // does not create opposite-facing sectors
   equals(a, b) && area(a.prev, a, a.next) > 0 && area(b.prev, b, b.next) > 0); // special zero-length case
 } // signed area of a triangle
 
@@ -28326,8 +28600,11 @@ var ExtrudeGeometry = /*#__PURE__*/function (_BufferGeometry8) {
 
   var _super79 = _createSuper(ExtrudeGeometry);
 
-  function ExtrudeGeometry(shapes = new Shape([new Vector2(0.5, 0.5), new Vector2(-0.5, 0.5), new Vector2(-0.5, -0.5), new Vector2(0.5, -0.5)]), options = {}) {
+  function ExtrudeGeometry() {
     var _this70;
+
+    var shapes = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Shape([new Vector2(0.5, 0.5), new Vector2(-0.5, 0.5), new Vector2(-0.5, -0.5), new Vector2(0.5, -0.5)]);
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
     _classCallCheck(this, ExtrudeGeometry);
 
@@ -28862,8 +29139,11 @@ var IcosahedronGeometry = /*#__PURE__*/function (_PolyhedronGeometry2) {
 
   var _super80 = _createSuper(IcosahedronGeometry);
 
-  function IcosahedronGeometry(radius = 1, detail = 0) {
+  function IcosahedronGeometry() {
     var _this71;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var detail = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
     _classCallCheck(this, IcosahedronGeometry);
 
@@ -28896,8 +29176,11 @@ var OctahedronGeometry = /*#__PURE__*/function (_PolyhedronGeometry3) {
 
   var _super81 = _createSuper(OctahedronGeometry);
 
-  function OctahedronGeometry(radius = 1, detail = 0) {
+  function OctahedronGeometry() {
     var _this72;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var detail = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
     _classCallCheck(this, OctahedronGeometry);
 
@@ -28929,8 +29212,15 @@ var RingGeometry = /*#__PURE__*/function (_BufferGeometry9) {
 
   var _super82 = _createSuper(RingGeometry);
 
-  function RingGeometry(innerRadius = 0.5, outerRadius = 1, thetaSegments = 8, phiSegments = 1, thetaStart = 0, thetaLength = Math.PI * 2) {
+  function RingGeometry() {
     var _this73;
+
+    var innerRadius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.5;
+    var outerRadius = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var thetaSegments = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 8;
+    var phiSegments = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+    var thetaStart = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
+    var thetaLength = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : Math.PI * 2;
 
     _classCallCheck(this, RingGeometry);
 
@@ -29023,8 +29313,11 @@ var ShapeGeometry = /*#__PURE__*/function (_BufferGeometry10) {
 
   var _super83 = _createSuper(ShapeGeometry);
 
-  function ShapeGeometry(shapes = new Shape([new Vector2(0, 0.5), new Vector2(-0.5, -0.5), new Vector2(0.5, -0.5)]), curveSegments = 12) {
+  function ShapeGeometry() {
     var _this74;
+
+    var shapes = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Shape([new Vector2(0, 0.5), new Vector2(-0.5, -0.5), new Vector2(0.5, -0.5)]);
+    var curveSegments = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 12;
 
     _classCallCheck(this, ShapeGeometry);
 
@@ -29161,8 +29454,16 @@ var SphereGeometry = /*#__PURE__*/function (_BufferGeometry11) {
 
   var _super84 = _createSuper(SphereGeometry);
 
-  function SphereGeometry(radius = 1, widthSegments = 32, heightSegments = 16, phiStart = 0, phiLength = Math.PI * 2, thetaStart = 0, thetaLength = Math.PI) {
+  function SphereGeometry() {
     var _this75;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var widthSegments = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 32;
+    var heightSegments = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 16;
+    var phiStart = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+    var phiLength = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : Math.PI * 2;
+    var thetaStart = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0;
+    var thetaLength = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : Math.PI;
 
     _classCallCheck(this, SphereGeometry);
 
@@ -29261,8 +29562,11 @@ var TetrahedronGeometry = /*#__PURE__*/function (_PolyhedronGeometry4) {
 
   var _super85 = _createSuper(TetrahedronGeometry);
 
-  function TetrahedronGeometry(radius = 1, detail = 0) {
+  function TetrahedronGeometry() {
     var _this76;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var detail = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
     _classCallCheck(this, TetrahedronGeometry);
 
@@ -29294,8 +29598,14 @@ var TorusGeometry = /*#__PURE__*/function (_BufferGeometry12) {
 
   var _super86 = _createSuper(TorusGeometry);
 
-  function TorusGeometry(radius = 1, tube = 0.4, radialSegments = 8, tubularSegments = 6, arc = Math.PI * 2) {
+  function TorusGeometry() {
     var _this77;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var tube = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.4;
+    var radialSegments = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 8;
+    var tubularSegments = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 6;
+    var arc = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : Math.PI * 2;
 
     _classCallCheck(this, TorusGeometry);
 
@@ -29383,8 +29693,15 @@ var TorusKnotGeometry = /*#__PURE__*/function (_BufferGeometry13) {
 
   var _super87 = _createSuper(TorusKnotGeometry);
 
-  function TorusKnotGeometry(radius = 1, tube = 0.4, tubularSegments = 64, radialSegments = 8, p = 2, q = 3) {
+  function TorusKnotGeometry() {
     var _this78;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var tube = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.4;
+    var tubularSegments = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 64;
+    var radialSegments = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 8;
+    var p = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 2;
+    var q = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 3;
 
     _classCallCheck(this, TorusKnotGeometry);
 
@@ -29505,8 +29822,14 @@ var TubeGeometry = /*#__PURE__*/function (_BufferGeometry14) {
 
   var _super88 = _createSuper(TubeGeometry);
 
-  function TubeGeometry(path = new QuadraticBezierCurve3(new Vector3(-1, -1, 0), new Vector3(-1, 1, 0), new Vector3(1, 1, 0)), tubularSegments = 64, radius = 1, radialSegments = 8, closed = false) {
+  function TubeGeometry() {
     var _this79;
+
+    var path = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new QuadraticBezierCurve3(new Vector3(-1, -1, 0), new Vector3(-1, 1, 0), new Vector3(1, 1, 0));
+    var tubularSegments = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 64;
+    var radius = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var radialSegments = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 8;
+    var closed = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
 
     _classCallCheck(this, TubeGeometry);
 
@@ -29642,8 +29965,10 @@ var WireframeGeometry = /*#__PURE__*/function (_BufferGeometry15) {
 
   var _super89 = _createSuper(WireframeGeometry);
 
-  function WireframeGeometry(geometry = null) {
+  function WireframeGeometry() {
     var _this80;
+
+    var geometry = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
     _classCallCheck(this, WireframeGeometry);
 
@@ -29725,7 +30050,7 @@ var WireframeGeometry = /*#__PURE__*/function (_BufferGeometry15) {
     return _this80;
   }
 
-  return _createClass(WireframeGeometry);
+  return WireframeGeometry;
 }(BufferGeometry);
 
 exports.WireframeGeometry = WireframeGeometry;
@@ -29841,7 +30166,7 @@ var RawShaderMaterial = /*#__PURE__*/function (_ShaderMaterial) {
     return _this82;
   }
 
-  return _createClass(RawShaderMaterial);
+  return RawShaderMaterial;
 }(ShaderMaterial);
 
 exports.RawShaderMaterial = RawShaderMaterial;
@@ -30644,7 +30969,8 @@ var AnimationUtils = {
       } while (key !== undefined);
     }
   },
-  subclip: function subclip(sourceClip, name, startFrame, endFrame, fps = 30) {
+  subclip: function subclip(sourceClip, name, startFrame, endFrame) {
+    var fps = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 30;
     var clip = sourceClip.clone();
     clip.name = name;
     var tracks = [];
@@ -30689,7 +31015,10 @@ var AnimationUtils = {
     clip.resetDuration();
     return clip;
   },
-  makeClipAdditive: function makeClipAdditive(targetClip, referenceFrame = 0, referenceClip = targetClip, fps = 30) {
+  makeClipAdditive: function makeClipAdditive(targetClip) {
+    var referenceFrame = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var referenceClip = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : targetClip;
+    var fps = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 30;
     if (fps <= 0) fps = 30;
     var numTracks = referenceClip.tracks.length;
     var referenceTime = referenceFrame / fps; // Make each track's values relative to the values at the reference frame
@@ -30957,16 +31286,12 @@ var Interpolant = /*#__PURE__*/function () {
 
   }, {
     key: "interpolate_",
-    value: function
-      /* i1, t0, t, t1 */
-    interpolate_() {
+    value: function interpolate_() {
       throw new Error('call to abstract method'); // implementations shall return this.resultBuffer
     }
   }, {
     key: "intervalChanged_",
-    value: function
-      /* i1, t0, t1 */
-    intervalChanged_() {// empty
+    value: function intervalChanged_() {// empty
     }
   }]);
 
@@ -31506,7 +31831,7 @@ var BooleanKeyframeTrack = /*#__PURE__*/function (_KeyframeTrack) {
     return _super103.apply(this, arguments);
   }
 
-  return _createClass(BooleanKeyframeTrack);
+  return BooleanKeyframeTrack;
 }(KeyframeTrack);
 
 exports.BooleanKeyframeTrack = BooleanKeyframeTrack;
@@ -31530,7 +31855,7 @@ var ColorKeyframeTrack = /*#__PURE__*/function (_KeyframeTrack2) {
     return _super104.apply(this, arguments);
   }
 
-  return _createClass(ColorKeyframeTrack);
+  return ColorKeyframeTrack;
 }(KeyframeTrack);
 
 exports.ColorKeyframeTrack = ColorKeyframeTrack;
@@ -31550,7 +31875,7 @@ var NumberKeyframeTrack = /*#__PURE__*/function (_KeyframeTrack3) {
     return _super105.apply(this, arguments);
   }
 
-  return _createClass(NumberKeyframeTrack);
+  return NumberKeyframeTrack;
 }(KeyframeTrack);
 
 exports.NumberKeyframeTrack = NumberKeyframeTrack;
@@ -31637,7 +31962,7 @@ var StringKeyframeTrack = /*#__PURE__*/function (_KeyframeTrack5) {
     return _super108.apply(this, arguments);
   }
 
-  return _createClass(StringKeyframeTrack);
+  return StringKeyframeTrack;
 }(KeyframeTrack);
 
 exports.StringKeyframeTrack = StringKeyframeTrack;
@@ -31661,14 +31986,18 @@ var VectorKeyframeTrack = /*#__PURE__*/function (_KeyframeTrack6) {
     return _super109.apply(this, arguments);
   }
 
-  return _createClass(VectorKeyframeTrack);
+  return VectorKeyframeTrack;
 }(KeyframeTrack);
 
 exports.VectorKeyframeTrack = VectorKeyframeTrack;
 VectorKeyframeTrack.prototype.ValueTypeName = 'vector';
 
 var AnimationClip = /*#__PURE__*/function () {
-  function AnimationClip(name, duration = -1, tracks, blendMode = NormalAnimationBlendMode) {
+  function AnimationClip(name) {
+    var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -1;
+    var tracks = arguments.length > 2 ? arguments[2] : undefined;
+    var blendMode = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : NormalAnimationBlendMode;
+
     _classCallCheck(this, AnimationClip);
 
     this.name = name;
@@ -32018,7 +32347,7 @@ var Cache = {
 };
 exports.Cache = Cache;
 
-var LoadingManager = /*#__PURE__*/_createClass(function LoadingManager(onLoad, onProgress, onError) {
+var LoadingManager = function LoadingManager(onLoad, onProgress, onError) {
   _classCallCheck(this, LoadingManager);
 
   var scope = this;
@@ -32109,7 +32438,7 @@ var LoadingManager = /*#__PURE__*/_createClass(function LoadingManager(onLoad, o
 
     return null;
   };
-});
+};
 
 exports.LoadingManager = LoadingManager;
 var DefaultLoadingManager = new LoadingManager();
@@ -32129,9 +32458,7 @@ var Loader = /*#__PURE__*/function () {
 
   _createClass(Loader, [{
     key: "load",
-    value: function
-      /* url, onLoad, onProgress, onError */
-    load() {}
+    value: function load() {}
   }, {
     key: "loadAsync",
     value: function loadAsync(url, onProgress) {
@@ -32142,9 +32469,7 @@ var Loader = /*#__PURE__*/function () {
     }
   }, {
     key: "parse",
-    value: function
-      /* data */
-    parse() {}
+    value: function parse() {}
   }, {
     key: "setCrossOrigin",
     value: function setCrossOrigin(crossOrigin) {
@@ -32266,10 +32591,10 @@ var FileLoader = /*#__PURE__*/function (_Loader) {
               readData();
 
               function readData() {
-                reader.read().then(function ({
-                  done: done,
-                  value: value
-                }) {
+                reader.read().then(function (_ref2) {
+                  var done = _ref2.done,
+                      value = _ref2.value;
+
                   if (done) {
                     controller.close();
                   } else {
@@ -32774,8 +33099,10 @@ var Light = /*#__PURE__*/function (_Object3D11) {
 
   var _super117 = _createSuper(Light);
 
-  function Light(color, intensity = 1) {
+  function Light(color) {
     var _this93;
+
+    var intensity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
     _classCallCheck(this, Light);
 
@@ -33022,8 +33349,13 @@ var SpotLight = /*#__PURE__*/function (_Light2) {
 
   var _super120 = _createSuper(SpotLight);
 
-  function SpotLight(color, intensity, distance = 0, angle = Math.PI / 3, penumbra = 0, decay = 1) {
+  function SpotLight(color, intensity) {
     var _this96;
+
+    var distance = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    var angle = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : Math.PI / 3;
+    var penumbra = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
+    var decay = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 1;
 
     _classCallCheck(this, SpotLight);
 
@@ -33127,7 +33459,8 @@ var PointLightShadow = /*#__PURE__*/function (_LightShadow2) {
 
   _createClass(PointLightShadow, [{
     key: "updateMatrices",
-    value: function updateMatrices(light, viewportIndex = 0) {
+    value: function updateMatrices(light) {
+      var viewportIndex = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       var camera = this.camera;
       var shadowMatrix = this.matrix;
       var far = light.distance || camera.far;
@@ -33164,8 +33497,11 @@ var PointLight = /*#__PURE__*/function (_Light3) {
 
   var _super122 = _createSuper(PointLight);
 
-  function PointLight(color, intensity, distance = 0, decay = 1) {
+  function PointLight(color, intensity) {
     var _this98;
+
+    var distance = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    var decay = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
 
     _classCallCheck(this, PointLight);
 
@@ -33227,7 +33563,7 @@ var DirectionalLightShadow = /*#__PURE__*/function (_LightShadow3) {
     return _this99;
   }
 
-  return _createClass(DirectionalLightShadow);
+  return DirectionalLightShadow;
 }(LightShadow);
 
 var DirectionalLight = /*#__PURE__*/function (_Light4) {
@@ -33290,7 +33626,7 @@ var AmbientLight = /*#__PURE__*/function (_Light5) {
     return _this101;
   }
 
-  return _createClass(AmbientLight);
+  return AmbientLight;
 }(Light);
 
 exports.AmbientLight = AmbientLight;
@@ -33300,8 +33636,11 @@ var RectAreaLight = /*#__PURE__*/function (_Light6) {
 
   var _super126 = _createSuper(RectAreaLight);
 
-  function RectAreaLight(color, intensity, width = 10, height = 10) {
+  function RectAreaLight(color, intensity) {
     var _this102;
+
+    var width = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
+    var height = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 10;
 
     _classCallCheck(this, RectAreaLight);
 
@@ -33500,7 +33839,8 @@ var SphericalHarmonics3 = /*#__PURE__*/function () {
     }
   }, {
     key: "fromArray",
-    value: function fromArray(array, offset = 0) {
+    value: function fromArray(array) {
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       var coefficients = this.coefficients;
 
       for (var _i295 = 0; _i295 < 9; _i295++) {
@@ -33511,7 +33851,9 @@ var SphericalHarmonics3 = /*#__PURE__*/function () {
     }
   }, {
     key: "toArray",
-    value: function toArray(array = [], offset = 0) {
+    value: function toArray() {
+      var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       var coefficients = this.coefficients;
 
       for (var _i296 = 0; _i296 < 9; _i296++) {
@@ -33554,8 +33896,11 @@ var LightProbe = /*#__PURE__*/function (_Light7) {
 
   var _super127 = _createSuper(LightProbe);
 
-  function LightProbe(sh = new SphericalHarmonics3(), intensity = 1) {
+  function LightProbe() {
     var _this103;
+
+    var sh = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new SphericalHarmonics3();
+    var intensity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
     _classCallCheck(this, LightProbe);
 
@@ -34153,9 +34498,9 @@ var ObjectLoader = /*#__PURE__*/function (_Loader10) {
   }, {
     key: "loadAsync",
     value: function () {
-      var _loadAsync = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(url, onProgress) {
+      var _loadAsync = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url, onProgress) {
         var scope, path, loader, text, json, metadata;
-        return _regeneratorRuntime().wrap(function _callee2$(_context9) {
+        return regeneratorRuntime.wrap(function _callee2$(_context9) {
           while (1) {
             switch (_context9.prev = _context9.next) {
               case 0:
@@ -34235,9 +34580,9 @@ var ObjectLoader = /*#__PURE__*/function (_Loader10) {
   }, {
     key: "parseAsync",
     value: function () {
-      var _parseAsync = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(json) {
+      var _parseAsync = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(json) {
         var animations, shapes, geometries, images, textures, materials, object, skeletons;
-        return _regeneratorRuntime().wrap(function _callee3$(_context10) {
+        return regeneratorRuntime.wrap(function _callee3$(_context10) {
           while (1) {
             switch (_context10.prev = _context10.next) {
               case 0:
@@ -34476,18 +34821,18 @@ var ObjectLoader = /*#__PURE__*/function (_Loader10) {
   }, {
     key: "parseImagesAsync",
     value: function () {
-      var _parseImagesAsync = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(json) {
+      var _parseImagesAsync = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(json) {
         var scope, images, loader, deserializeImage, _deserializeImage, _i306, il, image, url, imageArray, j, jl, currentUrl, deserializedImage, _deserializedImage2;
 
-        return _regeneratorRuntime().wrap(function _callee5$(_context12) {
+        return regeneratorRuntime.wrap(function _callee5$(_context12) {
           while (1) {
             switch (_context12.prev = _context12.next) {
               case 0:
                 _deserializeImage = function _deserializeImage3() {
-                  _deserializeImage = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(image) {
+                  _deserializeImage = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(image) {
                     var _url, path;
 
-                    return _regeneratorRuntime().wrap(function _callee4$(_context11) {
+                    return regeneratorRuntime.wrap(function _callee4$(_context11) {
                       while (1) {
                         switch (_context11.prev = _context11.next) {
                           case 0:
@@ -35138,8 +35483,10 @@ var HemisphereLightProbe = /*#__PURE__*/function (_LightProbe) {
 
   var _super134 = _createSuper(HemisphereLightProbe);
 
-  function HemisphereLightProbe(skyColor, groundColor, intensity = 1) {
+  function HemisphereLightProbe(skyColor, groundColor) {
     var _this107;
+
+    var intensity = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
 
     _classCallCheck(this, HemisphereLightProbe);
 
@@ -35160,7 +35507,7 @@ var HemisphereLightProbe = /*#__PURE__*/function (_LightProbe) {
     return _this107;
   }
 
-  return _createClass(HemisphereLightProbe);
+  return HemisphereLightProbe;
 }(LightProbe);
 
 exports.HemisphereLightProbe = HemisphereLightProbe;
@@ -35170,8 +35517,10 @@ var AmbientLightProbe = /*#__PURE__*/function (_LightProbe2) {
 
   var _super135 = _createSuper(AmbientLightProbe);
 
-  function AmbientLightProbe(color, intensity = 1) {
+  function AmbientLightProbe(color) {
     var _this108;
+
+    var intensity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
     _classCallCheck(this, AmbientLightProbe);
 
@@ -35184,7 +35533,7 @@ var AmbientLightProbe = /*#__PURE__*/function (_LightProbe2) {
     return _this108;
   }
 
-  return _createClass(AmbientLightProbe);
+  return AmbientLightProbe;
 }(LightProbe);
 
 exports.AmbientLightProbe = AmbientLightProbe;
@@ -35269,7 +35618,9 @@ var StereoCamera = /*#__PURE__*/function () {
 exports.StereoCamera = StereoCamera;
 
 var Clock = /*#__PURE__*/function () {
-  function Clock(autoStart = true) {
+  function Clock() {
+    var autoStart = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+
     _classCallCheck(this, Clock);
 
     this.autoStart = autoStart;
@@ -35526,7 +35877,9 @@ var Audio = /*#__PURE__*/function (_Object3D13) {
     }
   }, {
     key: "play",
-    value: function play(delay = 0) {
+    value: function play() {
+      var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
       if (this.isPlaying === true) {
         console.warn('THREE.Audio: Audio is already playing.');
         return;
@@ -35879,7 +36232,9 @@ var PositionalAudio = /*#__PURE__*/function (_Audio) {
 exports.PositionalAudio = PositionalAudio;
 
 var AudioAnalyser = /*#__PURE__*/function () {
-  function AudioAnalyser(audio, fftSize = 2048) {
+  function AudioAnalyser(audio) {
+    var fftSize = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2048;
+
     _classCallCheck(this, AudioAnalyser);
 
     this.analyser = audio.context.createAnalyser();
@@ -36961,7 +37316,10 @@ var AnimationObjectGroup = /*#__PURE__*/function () {
 exports.AnimationObjectGroup = AnimationObjectGroup;
 
 var AnimationAction = /*#__PURE__*/function () {
-  function AnimationAction(mixer, clip, localRoot = null, blendMode = clip.blendMode) {
+  function AnimationAction(mixer, clip) {
+    var localRoot = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+    var blendMode = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : clip.blendMode;
+
     _classCallCheck(this, AnimationAction);
 
     this._mixer = mixer;
@@ -38102,8 +38460,10 @@ var InstancedInterleavedBuffer = /*#__PURE__*/function (_InterleavedBuffer) {
 
   var _super140 = _createSuper(InstancedInterleavedBuffer);
 
-  function InstancedInterleavedBuffer(array, stride, meshPerAttribute = 1) {
+  function InstancedInterleavedBuffer(array, stride) {
     var _this113;
+
+    var meshPerAttribute = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
 
     _classCallCheck(this, InstancedInterleavedBuffer);
 
@@ -38196,7 +38556,10 @@ var GLBufferAttribute = /*#__PURE__*/function () {
 exports.GLBufferAttribute = GLBufferAttribute;
 
 var Raycaster = /*#__PURE__*/function () {
-  function Raycaster(origin, direction, near = 0, far = Infinity) {
+  function Raycaster(origin, direction) {
+    var near = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    var far = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : Infinity;
+
     _classCallCheck(this, Raycaster);
 
     this.ray = new Ray(origin, direction); // direction is assumed to be normalized (for accurate distance calculations)
@@ -38242,7 +38605,10 @@ var Raycaster = /*#__PURE__*/function () {
     }
   }, {
     key: "intersectObject",
-    value: function intersectObject(object, recursive = true, intersects = []) {
+    value: function intersectObject(object) {
+      var recursive = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      var intersects = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+
       _intersectObject(object, this, intersects, recursive);
 
       intersects.sort(ascSort);
@@ -38250,7 +38616,10 @@ var Raycaster = /*#__PURE__*/function () {
     }
   }, {
     key: "intersectObjects",
-    value: function intersectObjects(objects, recursive = true, intersects = []) {
+    value: function intersectObjects(objects) {
+      var recursive = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      var intersects = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+
       for (var _i346 = 0, l = objects.length; _i346 < l; _i346++) {
         _intersectObject(objects[_i346], this, intersects, recursive);
       }
@@ -38291,7 +38660,11 @@ function _intersectObject(object, raycaster, intersects, recursive) {
 
 
 var Spherical = /*#__PURE__*/function () {
-  function Spherical(radius = 1, phi = 0, theta = 0) {
+  function Spherical() {
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var phi = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var theta = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+
     _classCallCheck(this, Spherical);
 
     this.radius = radius;
@@ -38363,7 +38736,11 @@ var Spherical = /*#__PURE__*/function () {
 exports.Spherical = Spherical;
 
 var Cylindrical = /*#__PURE__*/function () {
-  function Cylindrical(radius = 1, theta = 0, y = 0) {
+  function Cylindrical() {
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var theta = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var y = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+
     _classCallCheck(this, Cylindrical);
 
     this.radius = radius; // distance from the origin to a point in the x-z plane
@@ -38419,7 +38796,10 @@ exports.Cylindrical = Cylindrical;
 var _vector$4 = /*@__PURE__*/new Vector2();
 
 var Box2 = /*#__PURE__*/function () {
-  function Box2(min = new Vector2(+Infinity, +Infinity), max = new Vector2(-Infinity, -Infinity)) {
+  function Box2() {
+    var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector2(+Infinity, +Infinity);
+    var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector2(-Infinity, -Infinity);
+
     _classCallCheck(this, Box2);
 
     this.isBox2 = true;
@@ -38583,7 +38963,10 @@ var _startP = /*@__PURE__*/new Vector3();
 var _startEnd = /*@__PURE__*/new Vector3();
 
 var Line3 = /*#__PURE__*/function () {
-  function Line3(start = new Vector3(), end = new Vector3()) {
+  function Line3() {
+    var start = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3();
+    var end = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3();
+
     _classCallCheck(this, Line3);
 
     this.start = start;
@@ -39021,8 +39404,13 @@ var GridHelper = /*#__PURE__*/function (_LineSegments2) {
 
   var _super145 = _createSuper(GridHelper);
 
-  function GridHelper(size = 10, divisions = 10, color1 = 0x444444, color2 = 0x888888) {
+  function GridHelper() {
     var _this118;
+
+    var size = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
+    var divisions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
+    var color1 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0x444444;
+    var color2 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0x888888;
 
     _classCallCheck(this, GridHelper);
 
@@ -39060,7 +39448,7 @@ var GridHelper = /*#__PURE__*/function (_LineSegments2) {
     return _this118;
   }
 
-  return _createClass(GridHelper);
+  return GridHelper;
 }(LineSegments);
 
 exports.GridHelper = GridHelper;
@@ -39070,8 +39458,15 @@ var PolarGridHelper = /*#__PURE__*/function (_LineSegments3) {
 
   var _super146 = _createSuper(PolarGridHelper);
 
-  function PolarGridHelper(radius = 10, radials = 16, circles = 8, divisions = 64, color1 = 0x444444, color2 = 0x888888) {
+  function PolarGridHelper() {
     var _this119;
+
+    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
+    var radials = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 16;
+    var circles = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 8;
+    var divisions = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 64;
+    var color1 = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0x444444;
+    var color2 = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0x888888;
 
     _classCallCheck(this, PolarGridHelper);
 
@@ -39128,7 +39523,7 @@ var PolarGridHelper = /*#__PURE__*/function (_LineSegments3) {
     return _this119;
   }
 
-  return _createClass(PolarGridHelper);
+  return PolarGridHelper;
 }(LineSegments);
 
 exports.PolarGridHelper = PolarGridHelper;
@@ -39389,8 +39784,10 @@ var BoxHelper = /*#__PURE__*/function (_LineSegments5) {
 
   var _super149 = _createSuper(BoxHelper);
 
-  function BoxHelper(object, color = 0xffff00) {
+  function BoxHelper(object) {
     var _this122;
+
+    var color = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0xffff00;
 
     _classCallCheck(this, BoxHelper);
 
@@ -39497,8 +39894,10 @@ var Box3Helper = /*#__PURE__*/function (_LineSegments6) {
 
   var _super150 = _createSuper(Box3Helper);
 
-  function Box3Helper(box, color = 0xffff00) {
+  function Box3Helper(box) {
     var _this123;
+
+    var color = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0xffff00;
 
     _classCallCheck(this, Box3Helper);
 
@@ -39542,8 +39941,11 @@ var PlaneHelper = /*#__PURE__*/function (_Line3) {
 
   var _super151 = _createSuper(PlaneHelper);
 
-  function PlaneHelper(plane, size = 1, hex = 0xffff00) {
+  function PlaneHelper(plane) {
     var _this124;
+
+    var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var hex = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0xffff00;
 
     _classCallCheck(this, PlaneHelper);
 
@@ -39605,8 +40007,15 @@ var ArrowHelper = /*#__PURE__*/function (_Object3D17) {
   var _super152 = _createSuper(ArrowHelper);
 
   // dir is assumed to be normalized
-  function ArrowHelper(dir = new Vector3(0, 0, 1), origin = new Vector3(0, 0, 0), length = 1, color = 0xffff00, headLength = length * 0.2, headWidth = headLength * 0.2) {
+  function ArrowHelper() {
     var _this125;
+
+    var dir = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Vector3(0, 0, 1);
+    var origin = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Vector3(0, 0, 0);
+    var length = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var color = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0xffff00;
+    var headLength = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : length * 0.2;
+    var headWidth = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : headLength * 0.2;
 
     _classCallCheck(this, ArrowHelper);
 
@@ -39665,7 +40074,9 @@ var ArrowHelper = /*#__PURE__*/function (_Object3D17) {
     }
   }, {
     key: "setLength",
-    value: function setLength(length, headLength = length * 0.2, headWidth = headLength * 0.2) {
+    value: function setLength(length) {
+      var headLength = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : length * 0.2;
+      var headWidth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : headLength * 0.2;
       this.line.scale.set(1, Math.max(0.0001, length - headLength), 1); // see #17458
 
       this.line.updateMatrix();
@@ -39700,8 +40111,10 @@ var AxesHelper = /*#__PURE__*/function (_LineSegments7) {
 
   var _super153 = _createSuper(AxesHelper);
 
-  function AxesHelper(size = 1) {
+  function AxesHelper() {
     var _this126;
+
+    var size = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
 
     _classCallCheck(this, AxesHelper);
 
@@ -40105,7 +40518,7 @@ var ParametricGeometry = /*#__PURE__*/function (_BufferGeometry17) {
     return _super154.call(this);
   }
 
-  return _createClass(ParametricGeometry);
+  return ParametricGeometry;
 }(BufferGeometry); // r133, eb58ff153119090d3bbb24474ea0ffc40c70dc92
 
 
@@ -40123,7 +40536,7 @@ var TextGeometry = /*#__PURE__*/function (_BufferGeometry18) {
     return _super155.call(this);
   }
 
-  return _createClass(TextGeometry);
+  return TextGeometry;
 }(BufferGeometry); // r133, eb58ff153119090d3bbb24474ea0ffc40c70dc92
 
 
@@ -40160,7 +40573,7 @@ var WebGLMultisampleRenderTarget = /*#__PURE__*/function (_WebGLRenderTarget5) {
     return _this127;
   }
 
-  return _createClass(WebGLMultisampleRenderTarget);
+  return WebGLMultisampleRenderTarget;
 }(WebGLRenderTarget); // r138, f9cd9cab03b7b64244e304900a3a2eeaa3a588ce
 
 
@@ -40178,7 +40591,7 @@ var DataTexture2DArray = /*#__PURE__*/function (_DataArrayTexture) {
     return _super157.call(this, data, width, height, depth);
   }
 
-  return _createClass(DataTexture2DArray);
+  return DataTexture2DArray;
 }(DataArrayTexture); // r138, f9cd9cab03b7b64244e304900a3a2eeaa3a588ce
 
 
@@ -40196,7 +40609,7 @@ var DataTexture3D = /*#__PURE__*/function (_Data3DTexture) {
     return _super158.call(this, data, width, height, depth);
   }
 
-  return _createClass(DataTexture3D);
+  return DataTexture3D;
 }(Data3DTexture);
 
 exports.DataTexture3D = DataTexture3D;
@@ -40249,12 +40662,12 @@ require("regenerator-runtime/runtime.js");
 
 var THREE = _interopRequireWildcard(require("three"));
 
-var _createCube = require("./createCube.js");
+var _createCube = require("./createCube");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-},{"regenerator-runtime/runtime.js":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","./createCube.js":"js/createCube.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime.js":"node_modules/regenerator-runtime/runtime.js","three":"node_modules/three/build/three.module.js","./createCube":"js/createCube.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -40282,7 +40695,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59646" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55143" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -40458,5 +40871,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
 //# sourceMappingURL=/js.00a46daa.js.map
