@@ -506,22 +506,23 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _three = require("three");
 var _threeInteractive = require("three.interactive");
+var _tweenJs = require("@tweenjs/tween.js");
+var _tweenJsDefault = parcelHelpers.interopDefault(_tweenJs);
 var _createCubeJs = require("./createCube.js");
 var _createCubeJsDefault = parcelHelpers.interopDefault(_createCubeJs);
-var _createLight = require("./createLight");
-var _createLightDefault = parcelHelpers.interopDefault(_createLight);
-var _animate = require("./animate");
-var _animateDefault = parcelHelpers.interopDefault(_animate);
-var _createCamera = require("./createCamera");
-var _createCameraDefault = parcelHelpers.interopDefault(_createCamera);
-var _createRenderer = require("./createRenderer");
-var _createRendererDefault = parcelHelpers.interopDefault(_createRenderer);
-var _createScene = require("./createScene");
-var _createSceneDefault = parcelHelpers.interopDefault(_createScene);
-const TWEEN = require("@tweenjs/tween.js");
-const renderer = (0, _createRendererDefault.default)();
-const scene = (0, _createSceneDefault.default)();
-const camera = (0, _createCameraDefault.default)();
+var _createLightJs = require("./createLight.js");
+var _createLightJsDefault = parcelHelpers.interopDefault(_createLightJs);
+var _animateJs = require("./animate.js");
+var _animateJsDefault = parcelHelpers.interopDefault(_animateJs);
+var _createCameraJs = require("./createCamera.js");
+var _createCameraJsDefault = parcelHelpers.interopDefault(_createCameraJs);
+var _createRendererJs = require("./createRenderer.js");
+var _createRendererJsDefault = parcelHelpers.interopDefault(_createRendererJs);
+var _createSceneJs = require("./createScene.js");
+var _createSceneJsDefault = parcelHelpers.interopDefault(_createSceneJs);
+const renderer = (0, _createRendererJsDefault.default)();
+const scene = (0, _createSceneJsDefault.default)();
+const camera = (0, _createCameraJsDefault.default)();
 const interactionManager = new (0, _threeInteractive.InteractionManager)(renderer, camera, renderer.domElement);
 const cubes = {
     pink: (0, _createCubeJsDefault.default)({
@@ -545,7 +546,7 @@ const cubes = {
         y: 1
     })
 };
-const light = (0, _createLightDefault.default)();
+const light = (0, _createLightJsDefault.default)();
 for (const [name, object] of Object.entries(cubes)){
     object.addEventListener("click", (event)=>{
         event.stopPropagation();
@@ -555,22 +556,22 @@ for (const [name, object] of Object.entries(cubes)){
             x: camera.position.x,
             y: camera.position.y
         };
-        new TWEEN.Tween(coords).to({
+        new (0, _tweenJsDefault.default).Tween(coords).to({
             x: cube.position.x,
             y: cube.position.y
-        }).easing(TWEEN.Easing.Quadratic.Out).onUpdate(()=>camera.position.set(coords.x, coords.y, camera.position.z)).start();
+        }).easing((0, _tweenJsDefault.default).Easing.Quadratic.Out).onUpdate(()=>camera.position.set(coords.x, coords.y, camera.position.z)).start();
     });
     interactionManager.add(object);
     scene.add(object);
 }
 scene.add(light);
-(0, _animateDefault.default)((time)=>{
+(0, _animateJsDefault.default)((time)=>{
     renderer.render(scene, camera);
     interactionManager.update();
-    TWEEN.update(time);
+    (0, _tweenJsDefault.default).update(time);
 });
 
-},{"three":"ktPTu","./createCube.js":"kx3xn","three.interactive":"knzlU","./createLight":"gfIZp","./animate":"l425x","./createCamera":"kZdwN","./createRenderer":"imDnS","./createScene":"2vLHi","@tweenjs/tween.js":"7DfAI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ktPTu":[function(require,module,exports) {
+},{"three":"ktPTu","./createCube.js":"kx3xn","three.interactive":"knzlU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@tweenjs/tween.js":"7DfAI","./createLight.js":"gfIZp","./animate.js":"l425x","./createCamera.js":"kZdwN","./createRenderer.js":"imDnS","./createScene.js":"2vLHi"}],"ktPTu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ACESFilmicToneMapping", ()=>ACESFilmicToneMapping);
@@ -29093,66 +29094,6 @@ var c = class {
     };
 };
 
-},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gfIZp":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _three = require("three");
-function createLight() {
-    const light = new _three.PointLight(0xffffff, 1, 1000);
-    light.position.set(0, 0, 10);
-    return light;
-}
-exports.default = createLight;
-
-},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l425x":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function animate(callback) {
-    function loop(time) {
-        callback(time);
-        requestAnimationFrame(loop);
-    }
-    requestAnimationFrame(loop);
-}
-exports.default = animate;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kZdwN":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _three = require("three");
-function createCamera() {
-    const camera = new _three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
-    return camera;
-}
-exports.default = createCamera;
-
-},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"imDnS":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _three = require("three");
-function createRenderer() {
-    const root = document.getElementById("app");
-    const renderer = new _three.WebGLRenderer({
-        antialias: true
-    });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    root.appendChild(renderer.domElement);
-    return renderer;
-}
-exports.default = createRenderer;
-
-},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2vLHi":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _three = require("three");
-function createScene() {
-    const scene = new _three.Scene();
-    scene.background = new _three.Color(0xffffff);
-    return scene;
-}
-exports.default = createScene;
-
 },{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7DfAI":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -29952,6 +29893,66 @@ process.umask = function() {
     return 0;
 };
 
-},{}]},["4lTDk","1Z4Rq"], "1Z4Rq", "parcelRequired723")
+},{}],"gfIZp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _three = require("three");
+function createLight() {
+    const light = new _three.PointLight(0xffffff, 1, 1000);
+    light.position.set(0, 0, 10);
+    return light;
+}
+exports.default = createLight;
+
+},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l425x":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function animate(callback) {
+    function loop(time) {
+        callback(time);
+        requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+}
+exports.default = animate;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kZdwN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _three = require("three");
+function createCamera() {
+    const camera = new _three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
+    return camera;
+}
+exports.default = createCamera;
+
+},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"imDnS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _three = require("three");
+function createRenderer() {
+    const root = document.getElementById("app");
+    const renderer = new _three.WebGLRenderer({
+        antialias: true
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    root.appendChild(renderer.domElement);
+    return renderer;
+}
+exports.default = createRenderer;
+
+},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2vLHi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _three = require("three");
+function createScene() {
+    const scene = new _three.Scene();
+    scene.background = new _three.Color(0xffffff);
+    return scene;
+}
+exports.default = createScene;
+
+},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["4lTDk","1Z4Rq"], "1Z4Rq", "parcelRequired723")
 
 //# sourceMappingURL=index.5d9dacde.js.map

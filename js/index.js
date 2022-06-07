@@ -1,17 +1,15 @@
 import "regenerator-runtime/runtime.js";
 import * as THREE from "three";
 import { InteractionManager } from "three.interactive";
+import TWEEN from "@tweenjs/tween.js";
 
-import createCube from './createCube.js';
+import createCube from "./createCube.js";
 import createLight from "./createLight.js";
 import animate from "./animate.js";
 import createCamera from "./createCamera.js";
 import createRenderer from "./createRenderer.js";
 import createScene from "./createScene.js";
 
-
-
-const TWEEN = require('@tweenjs/tween.js');
 
 
 const renderer = createRenderer();
