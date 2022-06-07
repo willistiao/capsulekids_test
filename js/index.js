@@ -2,7 +2,7 @@ import "regenerator-runtime/runtime.js";
 import * as THREE from "three";
 // import { InteractionManager } from "three.interactive";
 
-import { createCube } from './createCube.js';
+import createCube from './createCube.js';
 
 // import createCube from "./createCube.js";
 // import createLight from "./createLight";
