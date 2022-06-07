@@ -3,12 +3,11 @@ import * as THREE from "three";
 import { InteractionManager } from "three.interactive";
 
 import createCube from './createCube.js';
-import createCube from "./createCube.js";
-import createLight from "./createLight";
-import animate from "./animate";
-import createCamera from "./createCamera";
-import createRenderer from "./createRenderer";
-import createScene from "./createScene";
+import createLight from "./createLight.js";
+import animate from "./animate.js";
+import createCamera from "./createCamera.js";
+import createRenderer from "./createRenderer.js";
+import createScene from "./createScene.js";
 
 
 
