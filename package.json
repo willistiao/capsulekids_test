@@ -1,11 +1,11 @@
 {
   "name": "capsulekids_test",
   "version": "1.0.0",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "description": "",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
-    "build-github": "rm -rf docs/* && parcel build index.html --public-url ./ -d docs"
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
