@@ -1,7 +1,7 @@
 import "regenerator-runtime/runtime.js";
 import * as THREE from "three";
 import { InteractionManager } from "three.interactive";
-import TWEEN from "@tweenjs/tween.js";
+// import TWEEN from "@tweenjs/tween.js";
 
 import createCube from "./createCube.js";
 import createLight from "./createLight.js";
@@ -9,7 +9,6 @@ import animate from "./animate.js";
 import createCamera from "./createCamera.js";
 import createRenderer from "./createRenderer.js";
 import createScene from "./createScene.js";
-
 
 
 const renderer = createRenderer();
@@ -28,7 +27,6 @@ const cubes = {
   cyan: createCube({ color: 0x00d7d0, x: -1, y: 1 })
 };
 
-
 const light = createLight();
 
 for (const [name, object] of Object.entries(cubes)) {
@@ -36,14 +34,7 @@ for (const [name, object] of Object.entries(cubes)) {
     event.stopPropagation();
     console.log(`${name} cube was clicked`);
     const cube = event.target;
-    const coords = { x: camera.position.x, y: camera.position.y };
-    new TWEEN.Tween(coords)
-      .to({ x: cube.position.x, y: cube.position.y })
-      .easing(TWEEN.Easing.Quadratic.Out)
-      .onUpdate(() =>
-        camera.position.set(coords.x, coords.y, camera.position.z)
-      )
-      .start();
+    camera.position.set(cube.position.x, cube.position.y, camera.position.z);
   });
   interactionManager.add(object);
   scene.add(object);
@@ -51,8 +42,7 @@ for (const [name, object] of Object.entries(cubes)) {
 
 scene.add(light);
 
-animate((time) => {
+animate(() => {
   renderer.render(scene, camera);
   interactionManager.update();
-  TWEEN.update(time);
 });
