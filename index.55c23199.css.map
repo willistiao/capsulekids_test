@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAIE;;;;AAMA","sources":["src/styles/style.css"],"sourcesContent":["html {\r\n    box-sizing: border-box;\r\n  }\r\n  \r\n  *,\r\n  *:before,\r\n  *:after {\r\n    box-sizing: inherit;\r\n  }\r\n  \r\n  body {\r\n    font-family: sans-serif;\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\n  "],"names":[],"version":3,"file":"index.55c23199.css.map"}
